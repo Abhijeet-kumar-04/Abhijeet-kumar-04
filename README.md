@@ -19,7 +19,7 @@
 <h2 align="center">✦ WHOAMI ✦</h2>
 
 <div align="center">
-  <img src="./mac-terminal.svg" alt="Mac Terminal Whoami" width="100%" />
+  <img src="./ai-profile.svg" alt="AI Profile Animation" width="100%" />
 </div>
 
 <br/>
