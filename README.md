@@ -9,55 +9,33 @@
   <a href="https://www.linkedin.com/in/abhijeet-kumar-2a280b2a3"><img src="https://img.shields.io/badge/LinkedIn-0077b5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="#"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=LeetCode&logoColor=white" alt="LeetCode"/></a>
   <a href="mailto:your.email@example.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+  
+  <br/><br/>
+  <code>System Status: Online & Open to exciting opportunities</code>
 </div>
 
 <br/>
 
 <h2 align="center">✦ WHOAMI ✦</h2>
 
-```bash
-> whoami
-Abhijeet Kumar
-B.Tech CSE @ NIT Silchar
-
-> current_focus
-AI Systems
-Backend Development
-Competitive Programming
-System Design
-
-> tech_stack
-C++ | Python | JavaScript | TypeScript | Go
-React | Next.js | Node.js | MongoDB | PostgreSQL
-
-> future_goal
-Build large-scale AI products.
-```
+<div align="center">
+  <img src="./mac-terminal.svg" alt="Mac Terminal Whoami" width="100%" />
+</div>
 
 <br/>
 
-<h2 align="center">✦ CURRENT FOCUS ✦</h2>
+<h2 align="center">✦ ABHIJEET OS ✦</h2>
 
-<table align="center" width="100%">
-  <tr>
-    <td width="33%" align="center" valign="top">
-      <h3>🚀 Currently Building</h3>
-      <p><b>AI Autonomous Recruitment System</b></p>
-      <p><b>Music Hub</b></p>
-    </td>
-    <td width="33%" align="center" valign="top">
-      <h3>📚 Learning</h3>
-      <p><b>Golang</b></p>
-      <p><b>Advanced System Design</b></p>
-    </td>
-    <td width="33%" align="center" valign="top">
-      <h3>🔍 Exploring</h3>
-      <p><b>Distributed Systems</b></p>
-      <p><b>Backend Architecture</b></p>
-      <p><b>Open Source</b></p>
-    </td>
-  </tr>
-</table>
+```text
+┌──────────────────────────────────────────────────────────────────┐
+│ AbhijeetOS v3.0                                                  │
+├──────────────────────────────────────────────────────────────────┤
+│ Status     : Building AI Recruitment System & Music Hub          │
+│ Role       : Full Stack Developer & AI Engineer                  │
+│ Rank       : Codeforces Pupil                                    │
+│ Education  : B.Tech CSE @ NIT Silchar                            │
+└──────────────────────────────────────────────────────────────────┘
+```
 
 <br/>
 
@@ -68,22 +46,16 @@ Build large-scale AI products.
     <td width="50%" valign="top">
       <h3>🤖 AI Autonomous Recruitment System</h3>
       <p>A multimodal AI interview platform leveraging Gemini/Groq models for end-to-end recruitment.</p>
-      <p>
-        ⚡ <b>Key Highlights:</b><br/>
-        • 95%+ Resume Parsing Accuracy<br/>
-        • Supports 500+ Concurrent Users<br/>
-        • Voice Interviews & AI Evaluation<br/>
-      </p>
+      <code>★ 95%+ Resume Parsing Accuracy</code><br/>
+      <code>★ Supports 500+ Concurrent Users</code><br/>
+      <code>★ Voice Interviews & AI Evaluation</code>
     </td>
     <td width="50%" valign="top">
       <h3>🎵 Music Hub</h3>
       <p>A high-performance Spotify-inspired music streaming platform built for scalability.</p>
-      <p>
-        ⚡ <b>Key Highlights:</b><br/>
-        • Seamless Music Streaming<br/>
-        • Advanced Playlist Management<br/>
-        • Robust API Integration & Backend<br/>
-      </p>
+      <code>★ Seamless Music Streaming</code><br/>
+      <code>★ Advanced Playlist Management</code><br/>
+      <code>★ Robust API Integration & Backend</code>
     </td>
   </tr>
   <tr>
@@ -126,35 +98,38 @@ Build large-scale AI products.
 
 <br/>
 
-<h2 align="center">✦ ACHIEVEMENTS DASHBOARD ✦</h2>
+<h2 align="center">✦ ACHIEVEMENTS ✦</h2>
 
 <table align="center" width="100%">
   <tr align="center">
     <td width="33%">
       <h2>800+</h2>
-      <p>DSA Problems Solved</p>
+      <code>DSA PROBLEMS SOLVED</code>
     </td>
     <td width="33%">
-      <h2>Pupil</h2>
-      <p>Codeforces</p>
+      <h2>PUPIL</h2>
+      <code>CODEFORCES RANK</code>
     </td>
     <td width="33%">
       <h2>500+</h2>
-      <p>Concurrent Users Served</p>
+      <code>CONCURRENT USERS</code>
     </td>
   </tr>
   <tr align="center">
     <td>
+      <br/>
       <h2>95%+</h2>
-      <p>Resume Parsing Accuracy</p>
+      <code>PARSING ACCURACY</code>
     </td>
     <td>
+      <br/>
       <h2>150+</h2>
-      <p>Volunteers Managed</p>
+      <code>VOLUNTEERS MANAGED</code>
     </td>
     <td>
-      <h2>NIT Silchar</h2>
-      <p>B.Tech CSE</p>
+      <br/>
+      <h2>NIT SILCHAR</h2>
+      <code>B.TECH CSE</code>
     </td>
   </tr>
 </table>
@@ -184,25 +159,34 @@ Build large-scale AI products.
 
 <br/>
 
-<h2 align="center">✦ JOURNEY ✦</h2>
+<h2 align="center">✦ EXPERIENCE TREE ✦</h2>
 
-<pre align="center">
-2019 ─ School
-  │
-2023 ─ NIT Silchar
-  │
-2024 ─ Competitive Programming
-  │
-2025 ─ Full Stack Development
-  │
-2026 ─ AI Systems
-  │
-Future ─ Distributed Systems Engineer
-</pre>
+```text
+Computer Science
+│
+├── Competitive Programming
+│     └── 800+ Problems Solved
+│
+├── Full Stack Development
+│     ├── React & Next.js
+│     ├── Node.js & Go
+│     └── MongoDB & PostgreSQL
+│
+└── AI Engineering
+      ├── Gemini & Groq Models
+      ├── LLM Applications
+      └── High Concurrency Systems
+```
 
 <br/>
 
+<h2 align="center">✦ NOW ✦</h2>
+
 <div align="center">
+  <b>Building:</b> AI-Driven Applications & Scalable Backends<br/>
+  <b>Learning:</b> Advanced System Design & Golang<br/>
+  <b>Goal:</b> Distributed Systems Engineer<br/>
+  <br/>
   <i>"I enjoy building scalable systems, solving algorithmic problems, and exploring AI-driven applications."</i>
 </div>
 
