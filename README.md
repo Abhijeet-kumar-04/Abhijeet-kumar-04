@@ -179,7 +179,13 @@ Computer Science
 ```
 
 <br/>
+<h2 align="center">✦ EXPERIENCE TREE ✦</h2>
 
+<div align="center">
+  <img src="./experience-journey.svg" alt="Experience Journey" width="100%" />
+</div>
+
+<br/>
 <h2 align="center">✦ NOW ✦</h2>
 
 <div align="center">
