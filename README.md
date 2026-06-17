@@ -136,17 +136,34 @@
 
 <br/>
 
-<h2 align="center">✦ GITHUB METRICS ✦</h2>
-
+<h2 align="center">✦ GITHUB & CODING METRICS ✦</h2>
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Abhijeet-kumar-04&show_icons=true&theme=tokyonight&hide_border=true&title_color=7aa2f7&text_color=a9b1d6&icon_color=7aa2f7&bg_color=0d1117" height="195" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Abhijeet-kumar-04&theme=tokyonight&hide_border=true&background=0d1117&ring=7aa2f7&fire=7aa2f7&currStreakNum=a9b1d6" height="195" />
-  <br/><br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Abhijeet-kumar-04&layout=compact&theme=tokyonight&hide_border=true&title_color=7aa2f7&text_color=a9b1d6&bg_color=0d1117" width="300" />
+  <div>
+    <img src="https://github-readme-stats.vercel.app/api?username=Abhijeet-kumar-04&show_icons=true&theme=transparent&hide_border=true&title_color=cyan&text_color=white" height="150" alt="GitHub Stats" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Abhijeet-kumar-04&layout=compact&theme=transparent&hide_border=true&title_color=cyan&text_color=white" height="150" alt="Top Languages" />
+  </div>
+  <br/>
+
+  <div>
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Abhijeet-kumar-04&theme=transparent&hide_border=true&title_color=cyan&text_color=white" alt="GitHub Streak" />
+  </div>
+  <br/>
+
+  <h3>🏆 Coding Profiles & Growth Tracking</h3>
+  <p><i>View my monthly effort recaps and competitive programming profiles:</i></p>
+  
+  <a href="https://codolio.com/profile/Abhijeet__04">
+    <img src="https://img.shields.io/badge/Codolio-View_Profile-000000?style=for-the-badge&logo=googleanalytics&logoColor=white" alt="Codolio" />
+  </a>
+  <a href="https://www.hackerearth.com/@abhijeetkumar111000/">
+    <img src="https://img.shields.io/badge/HackerEarth-View_Profile-2C3454?style=for-the-badge&logo=hackerearth&logoColor=white" alt="HackerEarth" />
+  </a>
+  <a href="https://leetcode.com/u/Abhijeet_004/">
+    <img src="https://img.shields.io/badge/LeetCode-View_Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode" />
+  </a>
 </div>
 
 <br/>
-
 <h2 align="center">✦ CONTRIBUTION GRAPH ✦</h2>
 
 <div align="center">
