@@ -1,0 +1,677 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" width="1600" height="500">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D1117" />
+      <stop offset="50%" stop-color="#121820" />
+      <stop offset="100%" stop-color="#090c10" />
+    </linearGradient>
+
+    <!-- Primary Brand Gradient -->
+    <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F5FF" />
+      <stop offset="50%" stop-color="#7B61FF" />
+      <stop offset="100%" stop-color="#FF00FF" />
+    </linearGradient>
+
+    <!-- Vertical Brand Gradient -->
+    <linearGradient id="primary-grad-vert" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00F5FF" />
+      <stop offset="50%" stop-color="#7B61FF" />
+      <stop offset="100%" stop-color="#FF00FF" />
+    </linearGradient>
+    
+    <!-- Text Gradient -->
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#A0ABC0" />
+    </linearGradient>
+
+    <!-- Glass Stroke Gradient -->
+    <linearGradient id="glass-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.3)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.05)" />
+    </linearGradient>
+
+    <!-- Fade Mask for Grid -->
+    <linearGradient id="mask-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)" />
+      <stop offset="20%" stop-color="rgba(255,255,255,1)" />
+      <stop offset="80%" stop-color="rgba(255,255,255,1)" />
+      <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="mesh-blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="100" />
+    </filter>
+
+    <mask id="grid-mask">
+      <rect width="1600" height="500" fill="url(#mask-grad)" />
+    </mask>
+
+    <!-- Patterns -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+    </pattern>
+
+    <pattern id="stars" width="100" height="100" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.3)" />
+      <circle cx="50" cy="50" r="1.5" fill="rgba(255,255,255,0.2)" />
+      <circle cx="80" cy="30" r="1" fill="rgba(255,255,255,0.4)" />
+      <circle cx="30" cy="80" r="1.5" fill="rgba(255,255,255,0.1)" />
+    </pattern>
+
+    <!-- Clip Paths -->
+    <clipPath id="card-clip">
+      <rect width="200" height="45" rx="8" />
+    </clipPath>
+
+    <clipPath id="typewriter-clip1">
+      <rect x="30" y="-30" width="0" height="40">
+        <animate attributeName="width" values="0; 280; 280; 0; 0; 0" keyTimes="0; 0.055; 0.277; 0.333; 0.666; 1" dur="9s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <clipPath id="typewriter-clip2">
+      <rect x="30" y="-30" width="0" height="40">
+        <animate attributeName="width" values="0; 0; 0; 160; 160; 0; 0" keyTimes="0; 0.277; 0.333; 0.388; 0.611; 0.666; 1" dur="9s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <clipPath id="typewriter-clip3">
+      <rect x="30" y="-30" width="0" height="40">
+        <animate attributeName="width" values="0; 0; 0; 0; 0; 330; 330; 0" keyTimes="0; 0.333; 0.611; 0.666; 0.722; 0.944; 1" dur="9s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <style>
+      * {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      }
+      .mono {
+        font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
+      }
+      @keyframes blink-cursor {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      .cursor {
+        animation: blink-cursor 1s step-end infinite;
+      }
+      .card-border {
+        transition: all 0.3s ease;
+      }
+      a:hover .card-border {
+        stroke: #00F5FF;
+        stroke-width: 2;
+        filter: drop-shadow(0 0 8px rgba(0,245,255,0.5));
+      }
+      a:hover text {
+        fill: #00F5FF;
+      }
+    </style>
+  </defs>
+
+  <!-- 1. Background Layers -->
+  <rect width="1600" height="500" fill="url(#bg-grad)" />
+  
+  <rect width="1600" height="500" fill="url(#stars)">
+    <animate attributeName="opacity" values="0.4; 1; 0.4" dur="5s" repeatCount="indefinite" />
+  </rect>
+
+  <!-- Glowing Mesh Orbs -->
+  <g filter="url(#mesh-blur)" opacity="0.4">
+    <circle cx="200" cy="100" r="200" fill="#7B61FF">
+      <animate attributeName="cx" values="200; 400; 200" dur="20s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="100; 300; 100" dur="25s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1400" cy="400" r="250" fill="#00F5FF">
+      <animate attributeName="cx" values="1400; 1200; 1400" dur="22s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="400; 200; 400" dur="18s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="800" cy="250" r="250" fill="#FF00FF">
+      <animate attributeName="r" values="250; 350; 250" dur="15s" repeatCount="indefinite" />
+      <animate attributeName="cx" values="800; 900; 800" dur="28s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Animated Grid -->
+  <g mask="url(#grid-mask)">
+    <rect width="1600" height="540" y="-40" fill="url(#grid)">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 40" dur="3s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- Floating Code Symbols -->
+  <g class="mono" font-size="28" font-weight="bold">
+    <g transform="translate(200, 80)">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-20; 0,0" dur="6s" repeatCount="indefinite" />
+        <text fill="#00F5FF" opacity="0.2">&lt;/&gt;</text>
+      </g>
+    </g>
+    <g transform="translate(1400, 120)">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,20; 0,0" dur="8s" repeatCount="indefinite" />
+        <text fill="#7B61FF" opacity="0.2">{}</text>
+      </g>
+    </g>
+    <g transform="translate(350, 420)">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-15; 0,0" dur="7s" repeatCount="indefinite" />
+        <text fill="#FF00FF" opacity="0.2">[]</text>
+      </g>
+    </g>
+    <g transform="translate(1250, 350)">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,15; 0,0" dur="9s" repeatCount="indefinite" />
+        <text fill="#00F5FF" opacity="0.2">()</text>
+      </g>
+    </g>
+    <g transform="translate(550, 90)">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="5s" repeatCount="indefinite" />
+        <text fill="#7B61FF" opacity="0.2">;</text>
+      </g>
+    </g>
+    <g transform="translate(1050, 80)">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,20; 0,0" dur="7.5s" repeatCount="indefinite" />
+        <text fill="#FF00FF" opacity="0.2">&amp;&amp;</text>
+      </g>
+    </g>
+    <g transform="translate(850, 430)">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="6.5s" repeatCount="indefinite" />
+        <text fill="#00F5FF" opacity="0.2">===</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Orbiting dots around the center -->
+  <g transform="translate(800, 240)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="15s" repeatCount="indefinite" />
+      <circle cx="350" cy="0" r="3" fill="#00F5FF" filter="url(#glow)" />
+      <circle cx="-350" cy="0" r="3" fill="#FF00FF" filter="url(#glow)" />
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="360 0 0" to="0 0 0" dur="20s" repeatCount="indefinite" />
+      <circle cx="0" cy="220" r="4" fill="#7B61FF" filter="url(#glow)" />
+      <circle cx="0" cy="-220" r="4" fill="#00F5FF" filter="url(#glow)" />
+    </g>
+  </g>
+
+  <!-- 2. Left Side: Experience Tree Timeline -->
+  <g transform="translate(80, 100)">
+    <!-- Panel Background -->
+    <rect x="-25" y="-25" width="340" height="315" rx="16" fill="rgba(0,0,0,0.3)" stroke="url(#glass-stroke)" stroke-width="1" />
+    <text x="0" y="0" fill="#FFFFFF" font-size="18" font-weight="600" letter-spacing="2">TECH STACK</text>
+    <line x1="0" y1="20" x2="280" y2="20" stroke="url(#primary-grad)" stroke-width="2" />
+    
+    <g transform="translate(0, 30)">
+      <!-- Vertical Tree Line -->
+      <path d="M -15 10 L -15 220" stroke="url(#primary-grad-vert)" stroke-width="2" fill="none" stroke-dasharray="210" stroke-dashoffset="210">
+        <animate attributeName="stroke-dashoffset" values="210; 0; 0; 210" keyTimes="0; 0.3; 0.8; 1" dur="10s" repeatCount="indefinite" />
+      </path>
+
+      <!-- Tree Dots -->
+      <circle cx="-15" cy="10" r="4" fill="#00F5FF">
+        <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.05; 0.8; 1" dur="10s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="-15" cy="40" r="4" fill="#7B61FF">
+        <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.08; 0.8; 1" dur="10s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="-15" cy="70" r="4" fill="#FF00FF">
+        <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.11; 0.8; 1" dur="10s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="-15" cy="100" r="4" fill="#00F5FF">
+        <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.14; 0.8; 1" dur="10s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="-15" cy="130" r="4" fill="#7B61FF">
+        <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.17; 0.8; 1" dur="10s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="-15" cy="160" r="4" fill="#FF00FF">
+        <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.20; 0.8; 1" dur="10s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="-15" cy="190" r="4" fill="#00F5FF">
+        <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.23; 0.8; 1" dur="10s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="-15" cy="220" r="4" fill="#7B61FF">
+        <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.26; 0.8; 1" dur="10s" repeatCount="indefinite" />
+      </circle>
+
+      <!-- Skills Details -->
+      <g fill="#A0ABC0" font-size="14" font-weight="600">
+        <text x="0" y="15">C++</text>
+        <text x="0" y="45">Java</text>
+        <text x="0" y="75">Python</text>
+        <text x="0" y="105">JavaScript</text>
+        <text x="0" y="135">Node.js</text>
+        <text x="0" y="165">React</text>
+        <text x="0" y="195">Next.js</text>
+        <text x="0" y="225">AI/LLM</text>
+      </g>
+
+      <!-- Background Tracks -->
+      <g fill="rgba(255,255,255,0.1)">
+        <rect x="90" y="6" width="160" height="8" rx="4" />
+        <rect x="90" y="36" width="160" height="8" rx="4" />
+        <rect x="90" y="66" width="160" height="8" rx="4" />
+        <rect x="90" y="96" width="160" height="8" rx="4" />
+        <rect x="90" y="126" width="160" height="8" rx="4" />
+        <rect x="90" y="156" width="160" height="8" rx="4" />
+        <rect x="90" y="186" width="160" height="8" rx="4" />
+        <rect x="90" y="216" width="160" height="8" rx="4" />
+      </g>
+
+      <!-- Animated Fill Bars -->
+      <rect x="90" y="6" width="160" height="8" rx="4" fill="#00F5FF" filter="url(#glow)">
+        <animate attributeName="width" values="0; 160; 160; 0" keyTimes="0; 0.2; 0.8; 1" dur="10s" repeatCount="indefinite" />
+      </rect>
+      <rect x="90" y="36" width="144" height="8" rx="4" fill="#7B61FF" filter="url(#glow)">
+        <animate attributeName="width" values="0; 144; 144; 0" keyTimes="0; 0.2; 0.8; 1" dur="10s" repeatCount="indefinite" />
+      </rect>
+      <rect x="90" y="66" width="128" height="8" rx="4" fill="#FF00FF" filter="url(#glow)">
+        <animate attributeName="width" values="0; 128; 128; 0" keyTimes="0; 0.2; 0.8; 1" dur="10s" repeatCount="indefinite" />
+      </rect>
+      <rect x="90" y="96" width="144" height="8" rx="4" fill="#00F5FF" filter="url(#glow)">
+        <animate attributeName="width" values="0; 144; 144; 0" keyTimes="0; 0.2; 0.8; 1" dur="10s" repeatCount="indefinite" />
+      </rect>
+      <rect x="90" y="126" width="128" height="8" rx="4" fill="#7B61FF" filter="url(#glow)">
+        <animate attributeName="width" values="0; 128; 128; 0" keyTimes="0; 0.2; 0.8; 1" dur="10s" repeatCount="indefinite" />
+      </rect>
+      <rect x="90" y="156" width="128" height="8" rx="4" fill="#FF00FF" filter="url(#glow)">
+        <animate attributeName="width" values="0; 128; 128; 0" keyTimes="0; 0.2; 0.8; 1" dur="10s" repeatCount="indefinite" />
+      </rect>
+      <rect x="90" y="186" width="112" height="8" rx="4" fill="#00F5FF" filter="url(#glow)">
+        <animate attributeName="width" values="0; 112; 112; 0" keyTimes="0; 0.2; 0.8; 1" dur="10s" repeatCount="indefinite" />
+      </rect>
+      <rect x="90" y="216" width="144" height="8" rx="4" fill="#7B61FF" filter="url(#glow)">
+        <animate attributeName="width" values="0; 144; 144; 0" keyTimes="0; 0.2; 0.8; 1" dur="10s" repeatCount="indefinite" />
+      </rect>
+
+      <!-- Percentage Labels -->
+      <g opacity="0.8" fill="#FFFFFF" font-size="12" font-weight="600" text-anchor="end">
+        <text x="280" y="14">100%</text>
+        <text x="280" y="44">90%</text>
+        <text x="280" y="74">80%</text>
+        <text x="280" y="104">90%</text>
+        <text x="280" y="134">80%</text>
+        <text x="280" y="164">80%</text>
+        <text x="280" y="194">70%</text>
+        <text x="280" y="224">90%</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 3. Center Section: Title & Roles -->
+  <g transform="translate(800, 240)" text-anchor="middle">
+    <!-- Glowing underline for name -->
+    <path d="M -280 60 L 280 60" stroke="url(#primary-grad)" stroke-width="3" stroke-linecap="round" fill="none" filter="url(#glow)" stroke-dasharray="280 280">
+      <animate attributeName="stroke-dashoffset" values="560; 0" dur="4s" repeatCount="indefinite" />
+    </path>
+    
+    <text y="40" fill="url(#text-grad)" font-size="64" font-weight="800" letter-spacing="4">ABHIJEET KUMAR</text>
+    
+    <!-- Name Stroke overlay for neon effect -->
+    <text y="40" fill="none" stroke="url(#primary-grad)" stroke-width="1.5" stroke-dasharray="100 300" font-size="64" font-weight="800" letter-spacing="4" filter="url(#glow)">
+      <animate attributeName="stroke-dashoffset" values="400; 0" dur="5s" repeatCount="indefinite" />
+      ABHIJEET KUMAR
+    </text>
+
+    <!-- Typewriter Roles -->
+    <g transform="translate(-160, 110)" font-size="22" fill="#00F5FF" font-weight="600" class="mono" text-anchor="start">
+      <text x="0" y="0">&gt; </text>
+      <text x="30" y="0" clip-path="url(#typewriter-clip1)">Full Stack Developer</text>
+      <text x="30" y="0" clip-path="url(#typewriter-clip2)">AI Engineer</text>
+      <text x="30" y="0" clip-path="url(#typewriter-clip3)">Competitive Programmer</text>
+      
+      <!-- Blinking Cursor syncing with typing width -->
+      <text x="30" y="0" fill="#FFFFFF" class="cursor">_
+        <animate attributeName="x" values="30; 310; 310; 30; 30; 190; 190; 30; 30; 360; 360; 30" 
+                 keyTimes="0; 0.055; 0.277; 0.333; 0.334; 0.388; 0.611; 0.666; 0.667; 0.722; 0.944; 1" 
+                 dur="9s" repeatCount="indefinite" />
+      </text>
+    </g>
+    
+    <text y="150" fill="#A0ABC0" font-size="16" font-weight="400">Building scalable AI systems and backend applications.</text>
+  </g>
+
+  <!-- 4. Right Side: MASSIVE TRUE 3D REACTOR -->
+  <g transform="translate(1300, 250)">
+    <!-- Defs for 3D Masks and Gradients -->
+    <defs>
+      <clipPath id="front-half">
+        <rect x="-300" y="0" width="600" height="300" />
+      </clipPath>
+      <clipPath id="back-half">
+        <rect x="-300" y="-300" width="600" height="300" />
+      </clipPath>
+      <linearGradient id="crystal-face" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFFFFF" />
+        <stop offset="40%" stop-color="#00F5FF" />
+        <stop offset="100%" stop-color="#A855F7" />
+      </linearGradient>
+      <radialGradient id="plasma-grad">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+        <stop offset="20%" stop-color="#00F5FF" stop-opacity="0.7" />
+        <stop offset="60%" stop-color="#A855F7" stop-opacity="0.2" />
+        <stop offset="100%" stop-color="transparent" stop-opacity="0" />
+      </radialGradient>
+      <radialGradient id="core-grad">
+        <stop offset="0%" stop-color="#FFFFFF" />
+        <stop offset="50%" stop-color="#00F5FF" />
+        <stop offset="100%" stop-color="transparent" />
+      </radialGradient>
+    </defs>
+
+    <!-- Premium Sci-Fi HUD Callouts -->
+    
+    <!-- Top Left Callout: AI CORE Name -->
+    <g transform="translate(-400, -160)">
+      <!-- Animated target bracket -->
+      <path d="M 0 0 L -10 0 L -10 10" fill="none" stroke="#00F5FF" stroke-width="2" opacity="0.8" />
+      <path d="M 0 40 L -10 40 L -10 30" fill="none" stroke="#00F5FF" stroke-width="2" opacity="0.8" />
+      
+      <text x="5" y="15" fill="#FFFFFF" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="18" font-weight="700" letter-spacing="4">AI CORE</text>
+      <text x="5" y="32" fill="#A855F7" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="11" font-weight="600" letter-spacing="2">QUANTUM NEURAL ENGINE</text>
+      
+      <!-- Connecting line to reactor -->
+      <path d="M 230 20 L 260 20 L 280 60 L 320 60" fill="none" stroke="rgba(0,245,255,0.5)" stroke-width="1.5" />
+      <circle cx="320" cy="60" r="2.5" fill="#00F5FF" filter="url(#glow)" />
+      <circle cx="230" cy="20" r="1.5" fill="#FFFFFF" />
+    </g>
+
+    <!-- Right Side Callout: System Status -->
+    <g transform="translate(140, 80)">
+      <!-- Minimalist data block (right-aligned) -->
+      <line x1="130" y1="0" x2="130" y2="60" stroke="#A855F7" stroke-width="2" />
+      
+      <circle cx="115" cy="10" r="3.5" fill="#00FF66" filter="url(#glow)">
+        <animate attributeName="opacity" values="0.3; 1; 0.3" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="102" y="14" fill="#00FF66" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="12" font-weight="700" letter-spacing="1" text-anchor="end">SYSTEM UPDATE</text>
+      
+      <text x="70" y="35" fill="#A0ABC0" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="11" font-weight="500" text-anchor="end">CORE TEMP</text>
+      <text x="120" y="35" fill="#FFFFFF" font-family="'Space Grotesk', 'Inter', monospace" font-size="12" font-weight="600" text-anchor="end">23.4°C</text>
+      
+      <text x="70" y="55" fill="#A0ABC0" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="11" font-weight="500" text-anchor="end">NEURAL LOAD</text>
+      <text x="120" y="55" fill="#FFFFFF" font-family="'Space Grotesk', 'Inter', monospace" font-size="12" font-weight="600" text-anchor="end">87.2%</text>
+      
+      <!-- Connecting line to reactor (going left) -->
+      <path d="M -20 10 L -60 10 L -90 -40 L -140 -40" fill="none" stroke="rgba(168,85,247,0.6)" stroke-width="1.5" stroke-dasharray="2 4" />
+      <circle cx="-140" cy="-40" r="2.5" fill="#A855F7" filter="url(#glow)" />
+      <circle cx="-20" cy="10" r="1.5" fill="#FFFFFF" />
+    </g>
+
+    <!-- ==== COLOSSAL SCALED REACTOR ==== -->
+    <g transform="scale(1.4)">
+      
+      <!-- Layer 4: Holographic Sphere (Background) -->
+      <g opacity="0.15" stroke="#00F5FF" stroke-width="0.5" fill="none">
+        <ellipse cx="0" cy="0" rx="190" ry="50" />
+        <ellipse cx="0" cy="0" rx="190" ry="120" />
+        <ellipse cx="0" cy="0" rx="50" ry="190" />
+        <ellipse cx="0" cy="0" rx="120" ry="190" />
+        <circle cx="0" cy="0" r="190" />
+      </g>
+
+      <!-- BACK RINGS -->
+      <g transform="rotate(25)" clip-path="url(#back-half)">
+        <ellipse cx="0" cy="0" rx="80" ry="25" fill="none" stroke="rgba(0,150,200,0.5)" stroke-width="5">
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="80" ry="25" fill="none" stroke="#00F5FF" stroke-width="4" stroke-dasharray="15 2 2 2" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="15s" repeatCount="indefinite" />
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="74" ry="22" fill="none" stroke="#FFFFFF" stroke-width="1.5">
+        </ellipse>
+      </g>
+      <g transform="rotate(-35)" clip-path="url(#back-half)">
+        <ellipse cx="0" cy="0" rx="120" ry="38" fill="none" stroke="rgba(168,85,247,0.4)" stroke-width="6">
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="120" ry="38" fill="none" stroke="#A855F7" stroke-width="3" stroke-dasharray="10 5 5 10" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="30s" repeatCount="indefinite" />
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="120" ry="38" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-dasharray="2 98" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="5s" repeatCount="indefinite" />
+        </ellipse>
+      </g>
+      <g transform="rotate(60)" clip-path="url(#back-half)">
+        <ellipse cx="0" cy="0" rx="150" ry="48" fill="none" stroke="rgba(0,245,255,0.2)" stroke-width="2">
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="150" ry="48" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="0.5 99.5" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="40s" repeatCount="indefinite" />
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="150" ry="48" fill="none" stroke="#A855F7" stroke-width="3" stroke-dasharray="1 99" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="25s" repeatCount="indefinite" />
+        </ellipse>
+      </g>
+      <g transform="rotate(-15)" clip-path="url(#back-half)">
+        <ellipse cx="0" cy="0" rx="180" ry="60" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1">
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="180" ry="60" fill="none" stroke="#00F5FF" stroke-width="2" stroke-dasharray="20 80" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="60s" repeatCount="indefinite" />
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="180" ry="60" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="0.5 49.5" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="15s" repeatCount="indefinite" />
+        </ellipse>
+      </g>
+      <g transform="rotate(10)" clip-path="url(#back-half)">
+        <ellipse cx="0" cy="0" rx="135" ry="43" fill="none" stroke="rgba(168,85,247,0.3)" stroke-width="8" stroke-dasharray="1 2" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="45s" repeatCount="indefinite" />
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="135" ry="43" fill="none" stroke="#00F5FF" stroke-width="1" stroke-dasharray="0.5 2" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="20s" repeatCount="indefinite" />
+        </ellipse>
+      </g>
+      <g transform="rotate(80)" clip-path="url(#back-half)">
+        <ellipse cx="0" cy="0" rx="170" ry="130" fill="none" stroke="rgba(0,245,255,0.1)" stroke-width="1">
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="170" ry="130" fill="none" stroke="#A855F7" stroke-width="1.5" stroke-dasharray="5 20" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="35s" repeatCount="indefinite" />
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="170" ry="130" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="0.5 99.5" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="8s" repeatCount="indefinite" />
+        </ellipse>
+      </g>
+      <g transform="rotate(-70)" clip-path="url(#back-half)">
+        <ellipse cx="0" cy="0" rx="90" ry="30" fill="none" stroke="rgba(0,150,200,0.5)" stroke-width="2">
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="90" ry="30" fill="none" stroke="#00F5FF" stroke-width="1.5" stroke-dasharray="10 10" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="22s" repeatCount="indefinite" />
+        </ellipse>
+      </g>
+
+
+      <!-- Center Core and 3D Rotating Crystal -->
+      <g>
+        <!-- Energy Sphere / Volumetric Plasma -->
+        <circle cx="0" cy="0" r="75" fill="url(#plasma-grad)" filter="url(#glow)">
+          <animate attributeName="r" values="75; 80; 75" dur="4s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.7; 1; 0.7" dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="0" cy="0" r="50" fill="rgba(168,85,247,0.3)" filter="url(#glow)" />
+        
+        <!-- Crystal Caps -->
+
+    <polygon fill="rgba(0,245,255,0.6)" stroke="#FFFFFF" stroke-width="0.7">
+      <animate attributeName="points" values="30.00,-50.00 15.00,-40.91 -15.00,-40.91 -30.00,-50.00 -15.00,-59.09 15.00,-59.09;29.89,-49.08 12.68,-40.48 -17.21,-41.40 -29.89,-50.92 -12.68,-59.52 17.21,-58.60;29.54,-48.18 10.26,-40.13 -19.28,-41.96 -29.54,-51.82 -10.26,-59.87 19.28,-58.04;28.98,-47.28 7.76,-39.86 -21.21,-42.58 -28.98,-52.72 -7.76,-60.14 21.21,-57.42;28.19,-46.41 5.21,-39.66 -22.98,-43.25 -28.19,-53.59 -5.21,-60.34 22.98,-56.75;27.19,-45.56 2.61,-39.54 -24.57,-43.98 -27.19,-54.44 -2.61,-60.46 24.57,-56.02;25.98,-44.75 0.00,-39.50 -25.98,-44.75 -25.98,-55.25 -0.00,-60.50 25.98,-55.25;24.57,-43.98 -2.61,-39.54 -27.19,-45.56 -24.57,-56.02 2.61,-60.46 27.19,-54.44;22.98,-43.25 -5.21,-39.66 -28.19,-46.41 -22.98,-56.75 5.21,-60.34 28.19,-53.59;21.21,-42.58 -7.76,-39.86 -28.98,-47.28 -21.21,-57.42 7.76,-60.14 28.98,-52.72;19.28,-41.96 -10.26,-40.13 -29.54,-48.18 -19.28,-58.04 10.26,-59.87 29.54,-51.82;17.21,-41.40 -12.68,-40.48 -29.89,-49.08 -17.21,-58.60 12.68,-59.52 29.89,-50.92;15.00,-40.91 -15.00,-40.91 -30.00,-50.00 -15.00,-59.09 15.00,-59.09 30.00,-50.00;12.68,-40.48 -17.21,-41.40 -29.89,-50.92 -12.68,-59.52 17.21,-58.60 29.89,-49.08;10.26,-40.13 -19.28,-41.96 -29.54,-51.82 -10.26,-59.87 19.28,-58.04 29.54,-48.18;7.76,-39.86 -21.21,-42.58 -28.98,-52.72 -7.76,-60.14 21.21,-57.42 28.98,-47.28;5.21,-39.66 -22.98,-43.25 -28.19,-53.59 -5.21,-60.34 22.98,-56.75 28.19,-46.41;2.61,-39.54 -24.57,-43.98 -27.19,-54.44 -2.61,-60.46 24.57,-56.02 27.19,-45.56;0.00,-39.50 -25.98,-44.75 -25.98,-55.25 -0.00,-60.50 25.98,-55.25 25.98,-44.75;-2.61,-39.54 -27.19,-45.56 -24.57,-56.02 2.61,-60.46 27.19,-54.44 24.57,-43.98;-5.21,-39.66 -28.19,-46.41 -22.98,-56.75 5.21,-60.34 28.19,-53.59 22.98,-43.25;-7.76,-39.86 -28.98,-47.28 -21.21,-57.42 7.76,-60.14 28.98,-52.72 21.21,-42.58;-10.26,-40.13 -29.54,-48.18 -19.28,-58.04 10.26,-59.87 29.54,-51.82 19.28,-41.96;-12.68,-40.48 -29.89,-49.08 -17.21,-58.60 12.68,-59.52 29.89,-50.92 17.21,-41.40;-15.00,-40.91 -30.00,-50.00 -15.00,-59.09 15.00,-59.09 30.00,-50.00 15.00,-40.91;-17.21,-41.40 -29.89,-50.92 -12.68,-59.52 17.21,-58.60 29.89,-49.08 12.68,-40.48;-19.28,-41.96 -29.54,-51.82 -10.26,-59.87 19.28,-58.04 29.54,-48.18 10.26,-40.13;-21.21,-42.58 -28.98,-52.72 -7.76,-60.14 21.21,-57.42 28.98,-47.28 7.76,-39.86;-22.98,-43.25 -28.19,-53.59 -5.21,-60.34 22.98,-56.75 28.19,-46.41 5.21,-39.66;-24.57,-43.98 -27.19,-54.44 -2.61,-60.46 24.57,-56.02 27.19,-45.56 2.61,-39.54;-25.98,-44.75 -25.98,-55.25 -0.00,-60.50 25.98,-55.25 25.98,-44.75 0.00,-39.50;-27.19,-45.56 -24.57,-56.02 2.61,-60.46 27.19,-54.44 24.57,-43.98 -2.61,-39.54;-28.19,-46.41 -22.98,-56.75 5.21,-60.34 28.19,-53.59 22.98,-43.25 -5.21,-39.66;-28.98,-47.28 -21.21,-57.42 7.76,-60.14 28.98,-52.72 21.21,-42.58 -7.76,-39.86;-29.54,-48.18 -19.28,-58.04 10.26,-59.87 29.54,-51.82 19.28,-41.96 -10.26,-40.13;-29.89,-49.08 -17.21,-58.60 12.68,-59.52 29.89,-50.92 17.21,-41.40 -12.68,-40.48;-30.00,-50.00 -15.00,-59.09 15.00,-59.09 30.00,-50.00 15.00,-40.91 -15.00,-40.91;-29.89,-50.92 -12.68,-59.52 17.21,-58.60 29.89,-49.08 12.68,-40.48 -17.21,-41.40;-29.54,-51.82 -10.26,-59.87 19.28,-58.04 29.54,-48.18 10.26,-40.13 -19.28,-41.96;-28.98,-52.72 -7.76,-60.14 21.21,-57.42 28.98,-47.28 7.76,-39.86 -21.21,-42.58;-28.19,-53.59 -5.21,-60.34 22.98,-56.75 28.19,-46.41 5.21,-39.66 -22.98,-43.25;-27.19,-54.44 -2.61,-60.46 24.57,-56.02 27.19,-45.56 2.61,-39.54 -24.57,-43.98;-25.98,-55.25 -0.00,-60.50 25.98,-55.25 25.98,-44.75 0.00,-39.50 -25.98,-44.75;-24.57,-56.02 2.61,-60.46 27.19,-54.44 24.57,-43.98 -2.61,-39.54 -27.19,-45.56;-22.98,-56.75 5.21,-60.34 28.19,-53.59 22.98,-43.25 -5.21,-39.66 -28.19,-46.41;-21.21,-57.42 7.76,-60.14 28.98,-52.72 21.21,-42.58 -7.76,-39.86 -28.98,-47.28;-19.28,-58.04 10.26,-59.87 29.54,-51.82 19.28,-41.96 -10.26,-40.13 -29.54,-48.18;-17.21,-58.60 12.68,-59.52 29.89,-50.92 17.21,-41.40 -12.68,-40.48 -29.89,-49.08;-15.00,-59.09 15.00,-59.09 30.00,-50.00 15.00,-40.91 -15.00,-40.91 -30.00,-50.00;-12.68,-59.52 17.21,-58.60 29.89,-49.08 12.68,-40.48 -17.21,-41.40 -29.89,-50.92;-10.26,-59.87 19.28,-58.04 29.54,-48.18 10.26,-40.13 -19.28,-41.96 -29.54,-51.82;-7.76,-60.14 21.21,-57.42 28.98,-47.28 7.76,-39.86 -21.21,-42.58 -28.98,-52.72;-5.21,-60.34 22.98,-56.75 28.19,-46.41 5.21,-39.66 -22.98,-43.25 -28.19,-53.59;-2.61,-60.46 24.57,-56.02 27.19,-45.56 2.61,-39.54 -24.57,-43.98 -27.19,-54.44;-0.00,-60.50 25.98,-55.25 25.98,-44.75 0.00,-39.50 -25.98,-44.75 -25.98,-55.25;2.61,-60.46 27.19,-54.44 24.57,-43.98 -2.61,-39.54 -27.19,-45.56 -24.57,-56.02;5.21,-60.34 28.19,-53.59 22.98,-43.25 -5.21,-39.66 -28.19,-46.41 -22.98,-56.75;7.76,-60.14 28.98,-52.72 21.21,-42.58 -7.76,-39.86 -28.98,-47.28 -21.21,-57.42;10.26,-59.87 29.54,-51.82 19.28,-41.96 -10.26,-40.13 -29.54,-48.18 -19.28,-58.04;12.68,-59.52 29.89,-50.92 17.21,-41.40 -12.68,-40.48 -29.89,-49.08 -17.21,-58.60;15.00,-59.09 30.00,-50.00 15.00,-40.91 -15.00,-40.91 -30.00,-50.00 -15.00,-59.09;17.21,-58.60 29.89,-49.08 12.68,-40.48 -17.21,-41.40 -29.89,-50.92 -12.68,-59.52;19.28,-58.04 29.54,-48.18 10.26,-40.13 -19.28,-41.96 -29.54,-51.82 -10.26,-59.87;21.21,-57.42 28.98,-47.28 7.76,-39.86 -21.21,-42.58 -28.98,-52.72 -7.76,-60.14;22.98,-56.75 28.19,-46.41 5.21,-39.66 -22.98,-43.25 -28.19,-53.59 -5.21,-60.34;24.57,-56.02 27.19,-45.56 2.61,-39.54 -24.57,-43.98 -27.19,-54.44 -2.61,-60.46;25.98,-55.25 25.98,-44.75 0.00,-39.50 -25.98,-44.75 -25.98,-55.25 -0.00,-60.50;27.19,-54.44 24.57,-43.98 -2.61,-39.54 -27.19,-45.56 -24.57,-56.02 2.61,-60.46;28.19,-53.59 22.98,-43.25 -5.21,-39.66 -28.19,-46.41 -22.98,-56.75 5.21,-60.34;28.98,-52.72 21.21,-42.58 -7.76,-39.86 -28.98,-47.28 -21.21,-57.42 7.76,-60.14;29.54,-51.82 19.28,-41.96 -10.26,-40.13 -29.54,-48.18 -19.28,-58.04 10.26,-59.87;29.89,-50.92 17.21,-41.40 -12.68,-40.48 -29.89,-49.08 -17.21,-58.60 12.68,-59.52;30.00,-50.00 15.00,-40.91 -15.00,-40.91 -30.00,-50.00 -15.00,-59.09 15.00,-59.09" dur="25s" repeatCount="indefinite" />
+    </polygon>
+    <polygon fill="rgba(168,85,247,0.4)" stroke="#00F5FF" stroke-width="0.7">
+      <animate attributeName="points" values="30.00,50.00 15.00,59.09 -15.00,59.09 -30.00,50.00 -15.00,40.91 15.00,40.91;29.89,50.92 12.68,59.52 -17.21,58.60 -29.89,49.08 -12.68,40.48 17.21,41.40;29.54,51.82 10.26,59.87 -19.28,58.04 -29.54,48.18 -10.26,40.13 19.28,41.96;28.98,52.72 7.76,60.14 -21.21,57.42 -28.98,47.28 -7.76,39.86 21.21,42.58;28.19,53.59 5.21,60.34 -22.98,56.75 -28.19,46.41 -5.21,39.66 22.98,43.25;27.19,54.44 2.61,60.46 -24.57,56.02 -27.19,45.56 -2.61,39.54 24.57,43.98;25.98,55.25 0.00,60.50 -25.98,55.25 -25.98,44.75 -0.00,39.50 25.98,44.75;24.57,56.02 -2.61,60.46 -27.19,54.44 -24.57,43.98 2.61,39.54 27.19,45.56;22.98,56.75 -5.21,60.34 -28.19,53.59 -22.98,43.25 5.21,39.66 28.19,46.41;21.21,57.42 -7.76,60.14 -28.98,52.72 -21.21,42.58 7.76,39.86 28.98,47.28;19.28,58.04 -10.26,59.87 -29.54,51.82 -19.28,41.96 10.26,40.13 29.54,48.18;17.21,58.60 -12.68,59.52 -29.89,50.92 -17.21,41.40 12.68,40.48 29.89,49.08;15.00,59.09 -15.00,59.09 -30.00,50.00 -15.00,40.91 15.00,40.91 30.00,50.00;12.68,59.52 -17.21,58.60 -29.89,49.08 -12.68,40.48 17.21,41.40 29.89,50.92;10.26,59.87 -19.28,58.04 -29.54,48.18 -10.26,40.13 19.28,41.96 29.54,51.82;7.76,60.14 -21.21,57.42 -28.98,47.28 -7.76,39.86 21.21,42.58 28.98,52.72;5.21,60.34 -22.98,56.75 -28.19,46.41 -5.21,39.66 22.98,43.25 28.19,53.59;2.61,60.46 -24.57,56.02 -27.19,45.56 -2.61,39.54 24.57,43.98 27.19,54.44;0.00,60.50 -25.98,55.25 -25.98,44.75 -0.00,39.50 25.98,44.75 25.98,55.25;-2.61,60.46 -27.19,54.44 -24.57,43.98 2.61,39.54 27.19,45.56 24.57,56.02;-5.21,60.34 -28.19,53.59 -22.98,43.25 5.21,39.66 28.19,46.41 22.98,56.75;-7.76,60.14 -28.98,52.72 -21.21,42.58 7.76,39.86 28.98,47.28 21.21,57.42;-10.26,59.87 -29.54,51.82 -19.28,41.96 10.26,40.13 29.54,48.18 19.28,58.04;-12.68,59.52 -29.89,50.92 -17.21,41.40 12.68,40.48 29.89,49.08 17.21,58.60;-15.00,59.09 -30.00,50.00 -15.00,40.91 15.00,40.91 30.00,50.00 15.00,59.09;-17.21,58.60 -29.89,49.08 -12.68,40.48 17.21,41.40 29.89,50.92 12.68,59.52;-19.28,58.04 -29.54,48.18 -10.26,40.13 19.28,41.96 29.54,51.82 10.26,59.87;-21.21,57.42 -28.98,47.28 -7.76,39.86 21.21,42.58 28.98,52.72 7.76,60.14;-22.98,56.75 -28.19,46.41 -5.21,39.66 22.98,43.25 28.19,53.59 5.21,60.34;-24.57,56.02 -27.19,45.56 -2.61,39.54 24.57,43.98 27.19,54.44 2.61,60.46;-25.98,55.25 -25.98,44.75 -0.00,39.50 25.98,44.75 25.98,55.25 0.00,60.50;-27.19,54.44 -24.57,43.98 2.61,39.54 27.19,45.56 24.57,56.02 -2.61,60.46;-28.19,53.59 -22.98,43.25 5.21,39.66 28.19,46.41 22.98,56.75 -5.21,60.34;-28.98,52.72 -21.21,42.58 7.76,39.86 28.98,47.28 21.21,57.42 -7.76,60.14;-29.54,51.82 -19.28,41.96 10.26,40.13 29.54,48.18 19.28,58.04 -10.26,59.87;-29.89,50.92 -17.21,41.40 12.68,40.48 29.89,49.08 17.21,58.60 -12.68,59.52;-30.00,50.00 -15.00,40.91 15.00,40.91 30.00,50.00 15.00,59.09 -15.00,59.09;-29.89,49.08 -12.68,40.48 17.21,41.40 29.89,50.92 12.68,59.52 -17.21,58.60;-29.54,48.18 -10.26,40.13 19.28,41.96 29.54,51.82 10.26,59.87 -19.28,58.04;-28.98,47.28 -7.76,39.86 21.21,42.58 28.98,52.72 7.76,60.14 -21.21,57.42;-28.19,46.41 -5.21,39.66 22.98,43.25 28.19,53.59 5.21,60.34 -22.98,56.75;-27.19,45.56 -2.61,39.54 24.57,43.98 27.19,54.44 2.61,60.46 -24.57,56.02;-25.98,44.75 -0.00,39.50 25.98,44.75 25.98,55.25 0.00,60.50 -25.98,55.25;-24.57,43.98 2.61,39.54 27.19,45.56 24.57,56.02 -2.61,60.46 -27.19,54.44;-22.98,43.25 5.21,39.66 28.19,46.41 22.98,56.75 -5.21,60.34 -28.19,53.59;-21.21,42.58 7.76,39.86 28.98,47.28 21.21,57.42 -7.76,60.14 -28.98,52.72;-19.28,41.96 10.26,40.13 29.54,48.18 19.28,58.04 -10.26,59.87 -29.54,51.82;-17.21,41.40 12.68,40.48 29.89,49.08 17.21,58.60 -12.68,59.52 -29.89,50.92;-15.00,40.91 15.00,40.91 30.00,50.00 15.00,59.09 -15.00,59.09 -30.00,50.00;-12.68,40.48 17.21,41.40 29.89,50.92 12.68,59.52 -17.21,58.60 -29.89,49.08;-10.26,40.13 19.28,41.96 29.54,51.82 10.26,59.87 -19.28,58.04 -29.54,48.18;-7.76,39.86 21.21,42.58 28.98,52.72 7.76,60.14 -21.21,57.42 -28.98,47.28;-5.21,39.66 22.98,43.25 28.19,53.59 5.21,60.34 -22.98,56.75 -28.19,46.41;-2.61,39.54 24.57,43.98 27.19,54.44 2.61,60.46 -24.57,56.02 -27.19,45.56;-0.00,39.50 25.98,44.75 25.98,55.25 0.00,60.50 -25.98,55.25 -25.98,44.75;2.61,39.54 27.19,45.56 24.57,56.02 -2.61,60.46 -27.19,54.44 -24.57,43.98;5.21,39.66 28.19,46.41 22.98,56.75 -5.21,60.34 -28.19,53.59 -22.98,43.25;7.76,39.86 28.98,47.28 21.21,57.42 -7.76,60.14 -28.98,52.72 -21.21,42.58;10.26,40.13 29.54,48.18 19.28,58.04 -10.26,59.87 -29.54,51.82 -19.28,41.96;12.68,40.48 29.89,49.08 17.21,58.60 -12.68,59.52 -29.89,50.92 -17.21,41.40;15.00,40.91 30.00,50.00 15.00,59.09 -15.00,59.09 -30.00,50.00 -15.00,40.91;17.21,41.40 29.89,50.92 12.68,59.52 -17.21,58.60 -29.89,49.08 -12.68,40.48;19.28,41.96 29.54,51.82 10.26,59.87 -19.28,58.04 -29.54,48.18 -10.26,40.13;21.21,42.58 28.98,52.72 7.76,60.14 -21.21,57.42 -28.98,47.28 -7.76,39.86;22.98,43.25 28.19,53.59 5.21,60.34 -22.98,56.75 -28.19,46.41 -5.21,39.66;24.57,43.98 27.19,54.44 2.61,60.46 -24.57,56.02 -27.19,45.56 -2.61,39.54;25.98,44.75 25.98,55.25 0.00,60.50 -25.98,55.25 -25.98,44.75 -0.00,39.50;27.19,45.56 24.57,56.02 -2.61,60.46 -27.19,54.44 -24.57,43.98 2.61,39.54;28.19,46.41 22.98,56.75 -5.21,60.34 -28.19,53.59 -22.98,43.25 5.21,39.66;28.98,47.28 21.21,57.42 -7.76,60.14 -28.98,52.72 -21.21,42.58 7.76,39.86;29.54,48.18 19.28,58.04 -10.26,59.87 -29.54,51.82 -19.28,41.96 10.26,40.13;29.89,49.08 17.21,58.60 -12.68,59.52 -29.89,50.92 -17.21,41.40 12.68,40.48;30.00,50.00 15.00,59.09 -15.00,59.09 -30.00,50.00 -15.00,40.91 15.00,40.91" dur="25s" repeatCount="indefinite" />
+    </polygon>
+
+
+        <!-- Ultra-Realistic Mechanical Plasma Core -->
+        <g>
+          <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="10s" repeatCount="indefinite" />
+          <!-- Deep glow -->
+          <circle cx="0" cy="0" r="28" fill="rgba(0,245,255,0.25)" filter="url(#glow)">
+            <animate attributeName="r" values="25; 30; 25" dur="4s" repeatCount="indefinite" />
+          </circle>
+          <!-- Mechanical segmented outer housing -->
+          <circle cx="0" cy="0" r="18" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2" />
+          <circle cx="0" cy="0" r="18" fill="none" stroke="#00F5FF" stroke-width="3" stroke-dasharray="6 5" />
+          <!-- Inner depth shading -->
+          <circle cx="0" cy="0" r="14" fill="#08111F" />
+          <!-- Rotating mechanical iris / gear -->
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite" />
+            <path d="M 0 -14 L 4 -4 L 14 0 L 4 4 L 0 14 L -4 4 L -14 0 L -4 -4 Z" fill="#A855F7" opacity="0.9" />
+            <circle cx="0" cy="0" r="9" fill="none" stroke="#FFFFFF" stroke-width="0.5" stroke-dasharray="3 3" />
+          </g>
+          <!-- Intense Plasma Center Sphere -->
+          <circle cx="0" cy="0" r="8" fill="url(#core-grad)" filter="url(#glow)">
+             <animate attributeName="r" values="7.5; 9; 7.5" dur="2s" repeatCount="indefinite" />
+          </circle>
+          <!-- Absolute bright nucleus point -->
+          <circle cx="0" cy="0" r="4" fill="#FFFFFF" filter="url(#glow)" />
+        </g>
+        
+        <!-- Crystal Faces -->
+
+        <polygon fill="url(#crystal-face)" stroke="rgba(255,255,255,0.9)" stroke-width="0.5">
+          <animate attributeName="points" values="30.00,-50.00 15.00,-40.91 15.00,59.09 30.00,50.00;29.89,-49.08 12.68,-40.48 12.68,59.52 29.89,50.92;29.54,-48.18 10.26,-40.13 10.26,59.87 29.54,51.82;28.98,-47.28 7.76,-39.86 7.76,60.14 28.98,52.72;28.19,-46.41 5.21,-39.66 5.21,60.34 28.19,53.59;27.19,-45.56 2.61,-39.54 2.61,60.46 27.19,54.44;25.98,-44.75 0.00,-39.50 0.00,60.50 25.98,55.25;24.57,-43.98 -2.61,-39.54 -2.61,60.46 24.57,56.02;22.98,-43.25 -5.21,-39.66 -5.21,60.34 22.98,56.75;21.21,-42.58 -7.76,-39.86 -7.76,60.14 21.21,57.42;19.28,-41.96 -10.26,-40.13 -10.26,59.87 19.28,58.04;17.21,-41.40 -12.68,-40.48 -12.68,59.52 17.21,58.60;15.00,-40.91 -15.00,-40.91 -15.00,59.09 15.00,59.09;12.68,-40.48 -17.21,-41.40 -17.21,58.60 12.68,59.52;10.26,-40.13 -19.28,-41.96 -19.28,58.04 10.26,59.87;7.76,-39.86 -21.21,-42.58 -21.21,57.42 7.76,60.14;5.21,-39.66 -22.98,-43.25 -22.98,56.75 5.21,60.34;2.61,-39.54 -24.57,-43.98 -24.57,56.02 2.61,60.46;0.00,-39.50 -25.98,-44.75 -25.98,55.25 0.00,60.50;-2.61,-39.54 -27.19,-45.56 -27.19,54.44 -2.61,60.46;-5.21,-39.66 -28.19,-46.41 -28.19,53.59 -5.21,60.34;-7.76,-39.86 -28.98,-47.28 -28.98,52.72 -7.76,60.14;-10.26,-40.13 -29.54,-48.18 -29.54,51.82 -10.26,59.87;-12.68,-40.48 -29.89,-49.08 -29.89,50.92 -12.68,59.52;-15.00,-40.91 -30.00,-50.00 -30.00,50.00 -15.00,59.09;-17.21,-41.40 -29.89,-50.92 -29.89,49.08 -17.21,58.60;-19.28,-41.96 -29.54,-51.82 -29.54,48.18 -19.28,58.04;-21.21,-42.58 -28.98,-52.72 -28.98,47.28 -21.21,57.42;-22.98,-43.25 -28.19,-53.59 -28.19,46.41 -22.98,56.75;-24.57,-43.98 -27.19,-54.44 -27.19,45.56 -24.57,56.02;-25.98,-44.75 -25.98,-55.25 -25.98,44.75 -25.98,55.25;-27.19,-45.56 -24.57,-56.02 -24.57,43.98 -27.19,54.44;-28.19,-46.41 -22.98,-56.75 -22.98,43.25 -28.19,53.59;-28.98,-47.28 -21.21,-57.42 -21.21,42.58 -28.98,52.72;-29.54,-48.18 -19.28,-58.04 -19.28,41.96 -29.54,51.82;-29.89,-49.08 -17.21,-58.60 -17.21,41.40 -29.89,50.92;-30.00,-50.00 -15.00,-59.09 -15.00,40.91 -30.00,50.00;-29.89,-50.92 -12.68,-59.52 -12.68,40.48 -29.89,49.08;-29.54,-51.82 -10.26,-59.87 -10.26,40.13 -29.54,48.18;-28.98,-52.72 -7.76,-60.14 -7.76,39.86 -28.98,47.28;-28.19,-53.59 -5.21,-60.34 -5.21,39.66 -28.19,46.41;-27.19,-54.44 -2.61,-60.46 -2.61,39.54 -27.19,45.56;-25.98,-55.25 -0.00,-60.50 -0.00,39.50 -25.98,44.75;-24.57,-56.02 2.61,-60.46 2.61,39.54 -24.57,43.98;-22.98,-56.75 5.21,-60.34 5.21,39.66 -22.98,43.25;-21.21,-57.42 7.76,-60.14 7.76,39.86 -21.21,42.58;-19.28,-58.04 10.26,-59.87 10.26,40.13 -19.28,41.96;-17.21,-58.60 12.68,-59.52 12.68,40.48 -17.21,41.40;-15.00,-59.09 15.00,-59.09 15.00,40.91 -15.00,40.91;-12.68,-59.52 17.21,-58.60 17.21,41.40 -12.68,40.48;-10.26,-59.87 19.28,-58.04 19.28,41.96 -10.26,40.13;-7.76,-60.14 21.21,-57.42 21.21,42.58 -7.76,39.86;-5.21,-60.34 22.98,-56.75 22.98,43.25 -5.21,39.66;-2.61,-60.46 24.57,-56.02 24.57,43.98 -2.61,39.54;-0.00,-60.50 25.98,-55.25 25.98,44.75 -0.00,39.50;2.61,-60.46 27.19,-54.44 27.19,45.56 2.61,39.54;5.21,-60.34 28.19,-53.59 28.19,46.41 5.21,39.66;7.76,-60.14 28.98,-52.72 28.98,47.28 7.76,39.86;10.26,-59.87 29.54,-51.82 29.54,48.18 10.26,40.13;12.68,-59.52 29.89,-50.92 29.89,49.08 12.68,40.48;15.00,-59.09 30.00,-50.00 30.00,50.00 15.00,40.91;17.21,-58.60 29.89,-49.08 29.89,50.92 17.21,41.40;19.28,-58.04 29.54,-48.18 29.54,51.82 19.28,41.96;21.21,-57.42 28.98,-47.28 28.98,52.72 21.21,42.58;22.98,-56.75 28.19,-46.41 28.19,53.59 22.98,43.25;24.57,-56.02 27.19,-45.56 27.19,54.44 24.57,43.98;25.98,-55.25 25.98,-44.75 25.98,55.25 25.98,44.75;27.19,-54.44 24.57,-43.98 24.57,56.02 27.19,45.56;28.19,-53.59 22.98,-43.25 22.98,56.75 28.19,46.41;28.98,-52.72 21.21,-42.58 21.21,57.42 28.98,47.28;29.54,-51.82 19.28,-41.96 19.28,58.04 29.54,48.18;29.89,-50.92 17.21,-41.40 17.21,58.60 29.89,49.08;30.00,-50.00 15.00,-40.91 15.00,59.09 30.00,50.00" dur="25s" repeatCount="indefinite" />
+          <animate attributeName="fill-opacity" values="0.33;0.29;0.26;0.23;0.21;0.18;0.16;0.14;0.13;0.12;0.11;0.10;0.10;0.10;0.11;0.12;0.13;0.14;0.16;0.18;0.21;0.23;0.26;0.29;0.33;0.36;0.40;0.43;0.47;0.51;0.55;0.59;0.63;0.67;0.70;0.74;0.78;0.81;0.84;0.87;0.89;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.89;0.87;0.84;0.81;0.78;0.74;0.70;0.67;0.63;0.59;0.55;0.51;0.47;0.43;0.40;0.36;0.33" dur="25s" repeatCount="indefinite" />
+        </polygon>
+    
+        <polygon fill="url(#crystal-face)" stroke="rgba(255,255,255,0.9)" stroke-width="0.5">
+          <animate attributeName="points" values="15.00,-40.91 -15.00,-40.91 -15.00,59.09 15.00,59.09;12.68,-40.48 -17.21,-41.40 -17.21,58.60 12.68,59.52;10.26,-40.13 -19.28,-41.96 -19.28,58.04 10.26,59.87;7.76,-39.86 -21.21,-42.58 -21.21,57.42 7.76,60.14;5.21,-39.66 -22.98,-43.25 -22.98,56.75 5.21,60.34;2.61,-39.54 -24.57,-43.98 -24.57,56.02 2.61,60.46;0.00,-39.50 -25.98,-44.75 -25.98,55.25 0.00,60.50;-2.61,-39.54 -27.19,-45.56 -27.19,54.44 -2.61,60.46;-5.21,-39.66 -28.19,-46.41 -28.19,53.59 -5.21,60.34;-7.76,-39.86 -28.98,-47.28 -28.98,52.72 -7.76,60.14;-10.26,-40.13 -29.54,-48.18 -29.54,51.82 -10.26,59.87;-12.68,-40.48 -29.89,-49.08 -29.89,50.92 -12.68,59.52;-15.00,-40.91 -30.00,-50.00 -30.00,50.00 -15.00,59.09;-17.21,-41.40 -29.89,-50.92 -29.89,49.08 -17.21,58.60;-19.28,-41.96 -29.54,-51.82 -29.54,48.18 -19.28,58.04;-21.21,-42.58 -28.98,-52.72 -28.98,47.28 -21.21,57.42;-22.98,-43.25 -28.19,-53.59 -28.19,46.41 -22.98,56.75;-24.57,-43.98 -27.19,-54.44 -27.19,45.56 -24.57,56.02;-25.98,-44.75 -25.98,-55.25 -25.98,44.75 -25.98,55.25;-27.19,-45.56 -24.57,-56.02 -24.57,43.98 -27.19,54.44;-28.19,-46.41 -22.98,-56.75 -22.98,43.25 -28.19,53.59;-28.98,-47.28 -21.21,-57.42 -21.21,42.58 -28.98,52.72;-29.54,-48.18 -19.28,-58.04 -19.28,41.96 -29.54,51.82;-29.89,-49.08 -17.21,-58.60 -17.21,41.40 -29.89,50.92;-30.00,-50.00 -15.00,-59.09 -15.00,40.91 -30.00,50.00;-29.89,-50.92 -12.68,-59.52 -12.68,40.48 -29.89,49.08;-29.54,-51.82 -10.26,-59.87 -10.26,40.13 -29.54,48.18;-28.98,-52.72 -7.76,-60.14 -7.76,39.86 -28.98,47.28;-28.19,-53.59 -5.21,-60.34 -5.21,39.66 -28.19,46.41;-27.19,-54.44 -2.61,-60.46 -2.61,39.54 -27.19,45.56;-25.98,-55.25 -0.00,-60.50 -0.00,39.50 -25.98,44.75;-24.57,-56.02 2.61,-60.46 2.61,39.54 -24.57,43.98;-22.98,-56.75 5.21,-60.34 5.21,39.66 -22.98,43.25;-21.21,-57.42 7.76,-60.14 7.76,39.86 -21.21,42.58;-19.28,-58.04 10.26,-59.87 10.26,40.13 -19.28,41.96;-17.21,-58.60 12.68,-59.52 12.68,40.48 -17.21,41.40;-15.00,-59.09 15.00,-59.09 15.00,40.91 -15.00,40.91;-12.68,-59.52 17.21,-58.60 17.21,41.40 -12.68,40.48;-10.26,-59.87 19.28,-58.04 19.28,41.96 -10.26,40.13;-7.76,-60.14 21.21,-57.42 21.21,42.58 -7.76,39.86;-5.21,-60.34 22.98,-56.75 22.98,43.25 -5.21,39.66;-2.61,-60.46 24.57,-56.02 24.57,43.98 -2.61,39.54;-0.00,-60.50 25.98,-55.25 25.98,44.75 -0.00,39.50;2.61,-60.46 27.19,-54.44 27.19,45.56 2.61,39.54;5.21,-60.34 28.19,-53.59 28.19,46.41 5.21,39.66;7.76,-60.14 28.98,-52.72 28.98,47.28 7.76,39.86;10.26,-59.87 29.54,-51.82 29.54,48.18 10.26,40.13;12.68,-59.52 29.89,-50.92 29.89,49.08 12.68,40.48;15.00,-59.09 30.00,-50.00 30.00,50.00 15.00,40.91;17.21,-58.60 29.89,-49.08 29.89,50.92 17.21,41.40;19.28,-58.04 29.54,-48.18 29.54,51.82 19.28,41.96;21.21,-57.42 28.98,-47.28 28.98,52.72 21.21,42.58;22.98,-56.75 28.19,-46.41 28.19,53.59 22.98,43.25;24.57,-56.02 27.19,-45.56 27.19,54.44 24.57,43.98;25.98,-55.25 25.98,-44.75 25.98,55.25 25.98,44.75;27.19,-54.44 24.57,-43.98 24.57,56.02 27.19,45.56;28.19,-53.59 22.98,-43.25 22.98,56.75 28.19,46.41;28.98,-52.72 21.21,-42.58 21.21,57.42 28.98,47.28;29.54,-51.82 19.28,-41.96 19.28,58.04 29.54,48.18;29.89,-50.92 17.21,-41.40 17.21,58.60 29.89,49.08;30.00,-50.00 15.00,-40.91 15.00,59.09 30.00,50.00;29.89,-49.08 12.68,-40.48 12.68,59.52 29.89,50.92;29.54,-48.18 10.26,-40.13 10.26,59.87 29.54,51.82;28.98,-47.28 7.76,-39.86 7.76,60.14 28.98,52.72;28.19,-46.41 5.21,-39.66 5.21,60.34 28.19,53.59;27.19,-45.56 2.61,-39.54 2.61,60.46 27.19,54.44;25.98,-44.75 0.00,-39.50 0.00,60.50 25.98,55.25;24.57,-43.98 -2.61,-39.54 -2.61,60.46 24.57,56.02;22.98,-43.25 -5.21,-39.66 -5.21,60.34 22.98,56.75;21.21,-42.58 -7.76,-39.86 -7.76,60.14 21.21,57.42;19.28,-41.96 -10.26,-40.13 -10.26,59.87 19.28,58.04;17.21,-41.40 -12.68,-40.48 -12.68,59.52 17.21,58.60;15.00,-40.91 -15.00,-40.91 -15.00,59.09 15.00,59.09" dur="25s" repeatCount="indefinite" />
+          <animate attributeName="fill-opacity" values="0.10;0.10;0.11;0.12;0.13;0.14;0.16;0.18;0.21;0.23;0.26;0.29;0.33;0.36;0.40;0.43;0.47;0.51;0.55;0.59;0.63;0.67;0.70;0.74;0.78;0.81;0.84;0.87;0.89;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.89;0.87;0.84;0.81;0.78;0.74;0.70;0.67;0.63;0.59;0.55;0.51;0.47;0.43;0.40;0.36;0.33;0.29;0.26;0.23;0.21;0.18;0.16;0.14;0.13;0.12;0.11;0.10;0.10" dur="25s" repeatCount="indefinite" />
+        </polygon>
+    
+        <polygon fill="url(#crystal-face)" stroke="rgba(255,255,255,0.9)" stroke-width="0.5">
+          <animate attributeName="points" values="-15.00,-40.91 -30.00,-50.00 -30.00,50.00 -15.00,59.09;-17.21,-41.40 -29.89,-50.92 -29.89,49.08 -17.21,58.60;-19.28,-41.96 -29.54,-51.82 -29.54,48.18 -19.28,58.04;-21.21,-42.58 -28.98,-52.72 -28.98,47.28 -21.21,57.42;-22.98,-43.25 -28.19,-53.59 -28.19,46.41 -22.98,56.75;-24.57,-43.98 -27.19,-54.44 -27.19,45.56 -24.57,56.02;-25.98,-44.75 -25.98,-55.25 -25.98,44.75 -25.98,55.25;-27.19,-45.56 -24.57,-56.02 -24.57,43.98 -27.19,54.44;-28.19,-46.41 -22.98,-56.75 -22.98,43.25 -28.19,53.59;-28.98,-47.28 -21.21,-57.42 -21.21,42.58 -28.98,52.72;-29.54,-48.18 -19.28,-58.04 -19.28,41.96 -29.54,51.82;-29.89,-49.08 -17.21,-58.60 -17.21,41.40 -29.89,50.92;-30.00,-50.00 -15.00,-59.09 -15.00,40.91 -30.00,50.00;-29.89,-50.92 -12.68,-59.52 -12.68,40.48 -29.89,49.08;-29.54,-51.82 -10.26,-59.87 -10.26,40.13 -29.54,48.18;-28.98,-52.72 -7.76,-60.14 -7.76,39.86 -28.98,47.28;-28.19,-53.59 -5.21,-60.34 -5.21,39.66 -28.19,46.41;-27.19,-54.44 -2.61,-60.46 -2.61,39.54 -27.19,45.56;-25.98,-55.25 -0.00,-60.50 -0.00,39.50 -25.98,44.75;-24.57,-56.02 2.61,-60.46 2.61,39.54 -24.57,43.98;-22.98,-56.75 5.21,-60.34 5.21,39.66 -22.98,43.25;-21.21,-57.42 7.76,-60.14 7.76,39.86 -21.21,42.58;-19.28,-58.04 10.26,-59.87 10.26,40.13 -19.28,41.96;-17.21,-58.60 12.68,-59.52 12.68,40.48 -17.21,41.40;-15.00,-59.09 15.00,-59.09 15.00,40.91 -15.00,40.91;-12.68,-59.52 17.21,-58.60 17.21,41.40 -12.68,40.48;-10.26,-59.87 19.28,-58.04 19.28,41.96 -10.26,40.13;-7.76,-60.14 21.21,-57.42 21.21,42.58 -7.76,39.86;-5.21,-60.34 22.98,-56.75 22.98,43.25 -5.21,39.66;-2.61,-60.46 24.57,-56.02 24.57,43.98 -2.61,39.54;-0.00,-60.50 25.98,-55.25 25.98,44.75 -0.00,39.50;2.61,-60.46 27.19,-54.44 27.19,45.56 2.61,39.54;5.21,-60.34 28.19,-53.59 28.19,46.41 5.21,39.66;7.76,-60.14 28.98,-52.72 28.98,47.28 7.76,39.86;10.26,-59.87 29.54,-51.82 29.54,48.18 10.26,40.13;12.68,-59.52 29.89,-50.92 29.89,49.08 12.68,40.48;15.00,-59.09 30.00,-50.00 30.00,50.00 15.00,40.91;17.21,-58.60 29.89,-49.08 29.89,50.92 17.21,41.40;19.28,-58.04 29.54,-48.18 29.54,51.82 19.28,41.96;21.21,-57.42 28.98,-47.28 28.98,52.72 21.21,42.58;22.98,-56.75 28.19,-46.41 28.19,53.59 22.98,43.25;24.57,-56.02 27.19,-45.56 27.19,54.44 24.57,43.98;25.98,-55.25 25.98,-44.75 25.98,55.25 25.98,44.75;27.19,-54.44 24.57,-43.98 24.57,56.02 27.19,45.56;28.19,-53.59 22.98,-43.25 22.98,56.75 28.19,46.41;28.98,-52.72 21.21,-42.58 21.21,57.42 28.98,47.28;29.54,-51.82 19.28,-41.96 19.28,58.04 29.54,48.18;29.89,-50.92 17.21,-41.40 17.21,58.60 29.89,49.08;30.00,-50.00 15.00,-40.91 15.00,59.09 30.00,50.00;29.89,-49.08 12.68,-40.48 12.68,59.52 29.89,50.92;29.54,-48.18 10.26,-40.13 10.26,59.87 29.54,51.82;28.98,-47.28 7.76,-39.86 7.76,60.14 28.98,52.72;28.19,-46.41 5.21,-39.66 5.21,60.34 28.19,53.59;27.19,-45.56 2.61,-39.54 2.61,60.46 27.19,54.44;25.98,-44.75 0.00,-39.50 0.00,60.50 25.98,55.25;24.57,-43.98 -2.61,-39.54 -2.61,60.46 24.57,56.02;22.98,-43.25 -5.21,-39.66 -5.21,60.34 22.98,56.75;21.21,-42.58 -7.76,-39.86 -7.76,60.14 21.21,57.42;19.28,-41.96 -10.26,-40.13 -10.26,59.87 19.28,58.04;17.21,-41.40 -12.68,-40.48 -12.68,59.52 17.21,58.60;15.00,-40.91 -15.00,-40.91 -15.00,59.09 15.00,59.09;12.68,-40.48 -17.21,-41.40 -17.21,58.60 12.68,59.52;10.26,-40.13 -19.28,-41.96 -19.28,58.04 10.26,59.87;7.76,-39.86 -21.21,-42.58 -21.21,57.42 7.76,60.14;5.21,-39.66 -22.98,-43.25 -22.98,56.75 5.21,60.34;2.61,-39.54 -24.57,-43.98 -24.57,56.02 2.61,60.46;0.00,-39.50 -25.98,-44.75 -25.98,55.25 0.00,60.50;-2.61,-39.54 -27.19,-45.56 -27.19,54.44 -2.61,60.46;-5.21,-39.66 -28.19,-46.41 -28.19,53.59 -5.21,60.34;-7.76,-39.86 -28.98,-47.28 -28.98,52.72 -7.76,60.14;-10.26,-40.13 -29.54,-48.18 -29.54,51.82 -10.26,59.87;-12.68,-40.48 -29.89,-49.08 -29.89,50.92 -12.68,59.52;-15.00,-40.91 -30.00,-50.00 -30.00,50.00 -15.00,59.09" dur="25s" repeatCount="indefinite" />
+          <animate attributeName="fill-opacity" values="0.33;0.36;0.40;0.43;0.47;0.51;0.55;0.59;0.63;0.67;0.70;0.74;0.78;0.81;0.84;0.87;0.89;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.89;0.87;0.84;0.81;0.78;0.74;0.70;0.67;0.63;0.59;0.55;0.51;0.47;0.43;0.40;0.36;0.33;0.29;0.26;0.23;0.21;0.18;0.16;0.14;0.13;0.12;0.11;0.10;0.10;0.10;0.11;0.12;0.13;0.14;0.16;0.18;0.21;0.23;0.26;0.29;0.33" dur="25s" repeatCount="indefinite" />
+        </polygon>
+    
+        <polygon fill="url(#crystal-face)" stroke="rgba(255,255,255,0.9)" stroke-width="0.5">
+          <animate attributeName="points" values="-30.00,-50.00 -15.00,-59.09 -15.00,40.91 -30.00,50.00;-29.89,-50.92 -12.68,-59.52 -12.68,40.48 -29.89,49.08;-29.54,-51.82 -10.26,-59.87 -10.26,40.13 -29.54,48.18;-28.98,-52.72 -7.76,-60.14 -7.76,39.86 -28.98,47.28;-28.19,-53.59 -5.21,-60.34 -5.21,39.66 -28.19,46.41;-27.19,-54.44 -2.61,-60.46 -2.61,39.54 -27.19,45.56;-25.98,-55.25 -0.00,-60.50 -0.00,39.50 -25.98,44.75;-24.57,-56.02 2.61,-60.46 2.61,39.54 -24.57,43.98;-22.98,-56.75 5.21,-60.34 5.21,39.66 -22.98,43.25;-21.21,-57.42 7.76,-60.14 7.76,39.86 -21.21,42.58;-19.28,-58.04 10.26,-59.87 10.26,40.13 -19.28,41.96;-17.21,-58.60 12.68,-59.52 12.68,40.48 -17.21,41.40;-15.00,-59.09 15.00,-59.09 15.00,40.91 -15.00,40.91;-12.68,-59.52 17.21,-58.60 17.21,41.40 -12.68,40.48;-10.26,-59.87 19.28,-58.04 19.28,41.96 -10.26,40.13;-7.76,-60.14 21.21,-57.42 21.21,42.58 -7.76,39.86;-5.21,-60.34 22.98,-56.75 22.98,43.25 -5.21,39.66;-2.61,-60.46 24.57,-56.02 24.57,43.98 -2.61,39.54;-0.00,-60.50 25.98,-55.25 25.98,44.75 -0.00,39.50;2.61,-60.46 27.19,-54.44 27.19,45.56 2.61,39.54;5.21,-60.34 28.19,-53.59 28.19,46.41 5.21,39.66;7.76,-60.14 28.98,-52.72 28.98,47.28 7.76,39.86;10.26,-59.87 29.54,-51.82 29.54,48.18 10.26,40.13;12.68,-59.52 29.89,-50.92 29.89,49.08 12.68,40.48;15.00,-59.09 30.00,-50.00 30.00,50.00 15.00,40.91;17.21,-58.60 29.89,-49.08 29.89,50.92 17.21,41.40;19.28,-58.04 29.54,-48.18 29.54,51.82 19.28,41.96;21.21,-57.42 28.98,-47.28 28.98,52.72 21.21,42.58;22.98,-56.75 28.19,-46.41 28.19,53.59 22.98,43.25;24.57,-56.02 27.19,-45.56 27.19,54.44 24.57,43.98;25.98,-55.25 25.98,-44.75 25.98,55.25 25.98,44.75;27.19,-54.44 24.57,-43.98 24.57,56.02 27.19,45.56;28.19,-53.59 22.98,-43.25 22.98,56.75 28.19,46.41;28.98,-52.72 21.21,-42.58 21.21,57.42 28.98,47.28;29.54,-51.82 19.28,-41.96 19.28,58.04 29.54,48.18;29.89,-50.92 17.21,-41.40 17.21,58.60 29.89,49.08;30.00,-50.00 15.00,-40.91 15.00,59.09 30.00,50.00;29.89,-49.08 12.68,-40.48 12.68,59.52 29.89,50.92;29.54,-48.18 10.26,-40.13 10.26,59.87 29.54,51.82;28.98,-47.28 7.76,-39.86 7.76,60.14 28.98,52.72;28.19,-46.41 5.21,-39.66 5.21,60.34 28.19,53.59;27.19,-45.56 2.61,-39.54 2.61,60.46 27.19,54.44;25.98,-44.75 0.00,-39.50 0.00,60.50 25.98,55.25;24.57,-43.98 -2.61,-39.54 -2.61,60.46 24.57,56.02;22.98,-43.25 -5.21,-39.66 -5.21,60.34 22.98,56.75;21.21,-42.58 -7.76,-39.86 -7.76,60.14 21.21,57.42;19.28,-41.96 -10.26,-40.13 -10.26,59.87 19.28,58.04;17.21,-41.40 -12.68,-40.48 -12.68,59.52 17.21,58.60;15.00,-40.91 -15.00,-40.91 -15.00,59.09 15.00,59.09;12.68,-40.48 -17.21,-41.40 -17.21,58.60 12.68,59.52;10.26,-40.13 -19.28,-41.96 -19.28,58.04 10.26,59.87;7.76,-39.86 -21.21,-42.58 -21.21,57.42 7.76,60.14;5.21,-39.66 -22.98,-43.25 -22.98,56.75 5.21,60.34;2.61,-39.54 -24.57,-43.98 -24.57,56.02 2.61,60.46;0.00,-39.50 -25.98,-44.75 -25.98,55.25 0.00,60.50;-2.61,-39.54 -27.19,-45.56 -27.19,54.44 -2.61,60.46;-5.21,-39.66 -28.19,-46.41 -28.19,53.59 -5.21,60.34;-7.76,-39.86 -28.98,-47.28 -28.98,52.72 -7.76,60.14;-10.26,-40.13 -29.54,-48.18 -29.54,51.82 -10.26,59.87;-12.68,-40.48 -29.89,-49.08 -29.89,50.92 -12.68,59.52;-15.00,-40.91 -30.00,-50.00 -30.00,50.00 -15.00,59.09;-17.21,-41.40 -29.89,-50.92 -29.89,49.08 -17.21,58.60;-19.28,-41.96 -29.54,-51.82 -29.54,48.18 -19.28,58.04;-21.21,-42.58 -28.98,-52.72 -28.98,47.28 -21.21,57.42;-22.98,-43.25 -28.19,-53.59 -28.19,46.41 -22.98,56.75;-24.57,-43.98 -27.19,-54.44 -27.19,45.56 -24.57,56.02;-25.98,-44.75 -25.98,-55.25 -25.98,44.75 -25.98,55.25;-27.19,-45.56 -24.57,-56.02 -24.57,43.98 -27.19,54.44;-28.19,-46.41 -22.98,-56.75 -22.98,43.25 -28.19,53.59;-28.98,-47.28 -21.21,-57.42 -21.21,42.58 -28.98,52.72;-29.54,-48.18 -19.28,-58.04 -19.28,41.96 -29.54,51.82;-29.89,-49.08 -17.21,-58.60 -17.21,41.40 -29.89,50.92;-30.00,-50.00 -15.00,-59.09 -15.00,40.91 -30.00,50.00" dur="25s" repeatCount="indefinite" />
+          <animate attributeName="fill-opacity" values="0.78;0.81;0.84;0.87;0.89;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.89;0.87;0.84;0.81;0.78;0.74;0.70;0.67;0.63;0.59;0.55;0.51;0.47;0.43;0.40;0.36;0.33;0.29;0.26;0.23;0.21;0.18;0.16;0.14;0.13;0.12;0.11;0.10;0.10;0.10;0.11;0.12;0.13;0.14;0.16;0.18;0.21;0.23;0.26;0.29;0.33;0.36;0.40;0.43;0.47;0.51;0.55;0.59;0.63;0.67;0.70;0.74;0.77" dur="25s" repeatCount="indefinite" />
+        </polygon>
+    
+        <polygon fill="url(#crystal-face)" stroke="rgba(255,255,255,0.9)" stroke-width="0.5">
+          <animate attributeName="points" values="-15.00,-59.09 15.00,-59.09 15.00,40.91 -15.00,40.91;-12.68,-59.52 17.21,-58.60 17.21,41.40 -12.68,40.48;-10.26,-59.87 19.28,-58.04 19.28,41.96 -10.26,40.13;-7.76,-60.14 21.21,-57.42 21.21,42.58 -7.76,39.86;-5.21,-60.34 22.98,-56.75 22.98,43.25 -5.21,39.66;-2.61,-60.46 24.57,-56.02 24.57,43.98 -2.61,39.54;-0.00,-60.50 25.98,-55.25 25.98,44.75 -0.00,39.50;2.61,-60.46 27.19,-54.44 27.19,45.56 2.61,39.54;5.21,-60.34 28.19,-53.59 28.19,46.41 5.21,39.66;7.76,-60.14 28.98,-52.72 28.98,47.28 7.76,39.86;10.26,-59.87 29.54,-51.82 29.54,48.18 10.26,40.13;12.68,-59.52 29.89,-50.92 29.89,49.08 12.68,40.48;15.00,-59.09 30.00,-50.00 30.00,50.00 15.00,40.91;17.21,-58.60 29.89,-49.08 29.89,50.92 17.21,41.40;19.28,-58.04 29.54,-48.18 29.54,51.82 19.28,41.96;21.21,-57.42 28.98,-47.28 28.98,52.72 21.21,42.58;22.98,-56.75 28.19,-46.41 28.19,53.59 22.98,43.25;24.57,-56.02 27.19,-45.56 27.19,54.44 24.57,43.98;25.98,-55.25 25.98,-44.75 25.98,55.25 25.98,44.75;27.19,-54.44 24.57,-43.98 24.57,56.02 27.19,45.56;28.19,-53.59 22.98,-43.25 22.98,56.75 28.19,46.41;28.98,-52.72 21.21,-42.58 21.21,57.42 28.98,47.28;29.54,-51.82 19.28,-41.96 19.28,58.04 29.54,48.18;29.89,-50.92 17.21,-41.40 17.21,58.60 29.89,49.08;30.00,-50.00 15.00,-40.91 15.00,59.09 30.00,50.00;29.89,-49.08 12.68,-40.48 12.68,59.52 29.89,50.92;29.54,-48.18 10.26,-40.13 10.26,59.87 29.54,51.82;28.98,-47.28 7.76,-39.86 7.76,60.14 28.98,52.72;28.19,-46.41 5.21,-39.66 5.21,60.34 28.19,53.59;27.19,-45.56 2.61,-39.54 2.61,60.46 27.19,54.44;25.98,-44.75 0.00,-39.50 0.00,60.50 25.98,55.25;24.57,-43.98 -2.61,-39.54 -2.61,60.46 24.57,56.02;22.98,-43.25 -5.21,-39.66 -5.21,60.34 22.98,56.75;21.21,-42.58 -7.76,-39.86 -7.76,60.14 21.21,57.42;19.28,-41.96 -10.26,-40.13 -10.26,59.87 19.28,58.04;17.21,-41.40 -12.68,-40.48 -12.68,59.52 17.21,58.60;15.00,-40.91 -15.00,-40.91 -15.00,59.09 15.00,59.09;12.68,-40.48 -17.21,-41.40 -17.21,58.60 12.68,59.52;10.26,-40.13 -19.28,-41.96 -19.28,58.04 10.26,59.87;7.76,-39.86 -21.21,-42.58 -21.21,57.42 7.76,60.14;5.21,-39.66 -22.98,-43.25 -22.98,56.75 5.21,60.34;2.61,-39.54 -24.57,-43.98 -24.57,56.02 2.61,60.46;0.00,-39.50 -25.98,-44.75 -25.98,55.25 0.00,60.50;-2.61,-39.54 -27.19,-45.56 -27.19,54.44 -2.61,60.46;-5.21,-39.66 -28.19,-46.41 -28.19,53.59 -5.21,60.34;-7.76,-39.86 -28.98,-47.28 -28.98,52.72 -7.76,60.14;-10.26,-40.13 -29.54,-48.18 -29.54,51.82 -10.26,59.87;-12.68,-40.48 -29.89,-49.08 -29.89,50.92 -12.68,59.52;-15.00,-40.91 -30.00,-50.00 -30.00,50.00 -15.00,59.09;-17.21,-41.40 -29.89,-50.92 -29.89,49.08 -17.21,58.60;-19.28,-41.96 -29.54,-51.82 -29.54,48.18 -19.28,58.04;-21.21,-42.58 -28.98,-52.72 -28.98,47.28 -21.21,57.42;-22.98,-43.25 -28.19,-53.59 -28.19,46.41 -22.98,56.75;-24.57,-43.98 -27.19,-54.44 -27.19,45.56 -24.57,56.02;-25.98,-44.75 -25.98,-55.25 -25.98,44.75 -25.98,55.25;-27.19,-45.56 -24.57,-56.02 -24.57,43.98 -27.19,54.44;-28.19,-46.41 -22.98,-56.75 -22.98,43.25 -28.19,53.59;-28.98,-47.28 -21.21,-57.42 -21.21,42.58 -28.98,52.72;-29.54,-48.18 -19.28,-58.04 -19.28,41.96 -29.54,51.82;-29.89,-49.08 -17.21,-58.60 -17.21,41.40 -29.89,50.92;-30.00,-50.00 -15.00,-59.09 -15.00,40.91 -30.00,50.00;-29.89,-50.92 -12.68,-59.52 -12.68,40.48 -29.89,49.08;-29.54,-51.82 -10.26,-59.87 -10.26,40.13 -29.54,48.18;-28.98,-52.72 -7.76,-60.14 -7.76,39.86 -28.98,47.28;-28.19,-53.59 -5.21,-60.34 -5.21,39.66 -28.19,46.41;-27.19,-54.44 -2.61,-60.46 -2.61,39.54 -27.19,45.56;-25.98,-55.25 -0.00,-60.50 -0.00,39.50 -25.98,44.75;-24.57,-56.02 2.61,-60.46 2.61,39.54 -24.57,43.98;-22.98,-56.75 5.21,-60.34 5.21,39.66 -22.98,43.25;-21.21,-57.42 7.76,-60.14 7.76,39.86 -21.21,42.58;-19.28,-58.04 10.26,-59.87 10.26,40.13 -19.28,41.96;-17.21,-58.60 12.68,-59.52 12.68,40.48 -17.21,41.40;-15.00,-59.09 15.00,-59.09 15.00,40.91 -15.00,40.91" dur="25s" repeatCount="indefinite" />
+          <animate attributeName="fill-opacity" values="0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.89;0.87;0.84;0.81;0.78;0.74;0.70;0.67;0.63;0.59;0.55;0.51;0.47;0.43;0.40;0.36;0.33;0.29;0.26;0.23;0.21;0.18;0.16;0.14;0.13;0.12;0.11;0.10;0.10;0.10;0.11;0.12;0.13;0.14;0.16;0.18;0.21;0.23;0.26;0.29;0.33;0.36;0.40;0.43;0.47;0.51;0.55;0.59;0.63;0.67;0.70;0.74;0.77;0.81;0.84;0.87;0.89;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90" dur="25s" repeatCount="indefinite" />
+        </polygon>
+    
+        <polygon fill="url(#crystal-face)" stroke="rgba(255,255,255,0.9)" stroke-width="0.5">
+          <animate attributeName="points" values="15.00,-59.09 30.00,-50.00 30.00,50.00 15.00,40.91;17.21,-58.60 29.89,-49.08 29.89,50.92 17.21,41.40;19.28,-58.04 29.54,-48.18 29.54,51.82 19.28,41.96;21.21,-57.42 28.98,-47.28 28.98,52.72 21.21,42.58;22.98,-56.75 28.19,-46.41 28.19,53.59 22.98,43.25;24.57,-56.02 27.19,-45.56 27.19,54.44 24.57,43.98;25.98,-55.25 25.98,-44.75 25.98,55.25 25.98,44.75;27.19,-54.44 24.57,-43.98 24.57,56.02 27.19,45.56;28.19,-53.59 22.98,-43.25 22.98,56.75 28.19,46.41;28.98,-52.72 21.21,-42.58 21.21,57.42 28.98,47.28;29.54,-51.82 19.28,-41.96 19.28,58.04 29.54,48.18;29.89,-50.92 17.21,-41.40 17.21,58.60 29.89,49.08;30.00,-50.00 15.00,-40.91 15.00,59.09 30.00,50.00;29.89,-49.08 12.68,-40.48 12.68,59.52 29.89,50.92;29.54,-48.18 10.26,-40.13 10.26,59.87 29.54,51.82;28.98,-47.28 7.76,-39.86 7.76,60.14 28.98,52.72;28.19,-46.41 5.21,-39.66 5.21,60.34 28.19,53.59;27.19,-45.56 2.61,-39.54 2.61,60.46 27.19,54.44;25.98,-44.75 0.00,-39.50 0.00,60.50 25.98,55.25;24.57,-43.98 -2.61,-39.54 -2.61,60.46 24.57,56.02;22.98,-43.25 -5.21,-39.66 -5.21,60.34 22.98,56.75;21.21,-42.58 -7.76,-39.86 -7.76,60.14 21.21,57.42;19.28,-41.96 -10.26,-40.13 -10.26,59.87 19.28,58.04;17.21,-41.40 -12.68,-40.48 -12.68,59.52 17.21,58.60;15.00,-40.91 -15.00,-40.91 -15.00,59.09 15.00,59.09;12.68,-40.48 -17.21,-41.40 -17.21,58.60 12.68,59.52;10.26,-40.13 -19.28,-41.96 -19.28,58.04 10.26,59.87;7.76,-39.86 -21.21,-42.58 -21.21,57.42 7.76,60.14;5.21,-39.66 -22.98,-43.25 -22.98,56.75 5.21,60.34;2.61,-39.54 -24.57,-43.98 -24.57,56.02 2.61,60.46;0.00,-39.50 -25.98,-44.75 -25.98,55.25 0.00,60.50;-2.61,-39.54 -27.19,-45.56 -27.19,54.44 -2.61,60.46;-5.21,-39.66 -28.19,-46.41 -28.19,53.59 -5.21,60.34;-7.76,-39.86 -28.98,-47.28 -28.98,52.72 -7.76,60.14;-10.26,-40.13 -29.54,-48.18 -29.54,51.82 -10.26,59.87;-12.68,-40.48 -29.89,-49.08 -29.89,50.92 -12.68,59.52;-15.00,-40.91 -30.00,-50.00 -30.00,50.00 -15.00,59.09;-17.21,-41.40 -29.89,-50.92 -29.89,49.08 -17.21,58.60;-19.28,-41.96 -29.54,-51.82 -29.54,48.18 -19.28,58.04;-21.21,-42.58 -28.98,-52.72 -28.98,47.28 -21.21,57.42;-22.98,-43.25 -28.19,-53.59 -28.19,46.41 -22.98,56.75;-24.57,-43.98 -27.19,-54.44 -27.19,45.56 -24.57,56.02;-25.98,-44.75 -25.98,-55.25 -25.98,44.75 -25.98,55.25;-27.19,-45.56 -24.57,-56.02 -24.57,43.98 -27.19,54.44;-28.19,-46.41 -22.98,-56.75 -22.98,43.25 -28.19,53.59;-28.98,-47.28 -21.21,-57.42 -21.21,42.58 -28.98,52.72;-29.54,-48.18 -19.28,-58.04 -19.28,41.96 -29.54,51.82;-29.89,-49.08 -17.21,-58.60 -17.21,41.40 -29.89,50.92;-30.00,-50.00 -15.00,-59.09 -15.00,40.91 -30.00,50.00;-29.89,-50.92 -12.68,-59.52 -12.68,40.48 -29.89,49.08;-29.54,-51.82 -10.26,-59.87 -10.26,40.13 -29.54,48.18;-28.98,-52.72 -7.76,-60.14 -7.76,39.86 -28.98,47.28;-28.19,-53.59 -5.21,-60.34 -5.21,39.66 -28.19,46.41;-27.19,-54.44 -2.61,-60.46 -2.61,39.54 -27.19,45.56;-25.98,-55.25 -0.00,-60.50 -0.00,39.50 -25.98,44.75;-24.57,-56.02 2.61,-60.46 2.61,39.54 -24.57,43.98;-22.98,-56.75 5.21,-60.34 5.21,39.66 -22.98,43.25;-21.21,-57.42 7.76,-60.14 7.76,39.86 -21.21,42.58;-19.28,-58.04 10.26,-59.87 10.26,40.13 -19.28,41.96;-17.21,-58.60 12.68,-59.52 12.68,40.48 -17.21,41.40;-15.00,-59.09 15.00,-59.09 15.00,40.91 -15.00,40.91;-12.68,-59.52 17.21,-58.60 17.21,41.40 -12.68,40.48;-10.26,-59.87 19.28,-58.04 19.28,41.96 -10.26,40.13;-7.76,-60.14 21.21,-57.42 21.21,42.58 -7.76,39.86;-5.21,-60.34 22.98,-56.75 22.98,43.25 -5.21,39.66;-2.61,-60.46 24.57,-56.02 24.57,43.98 -2.61,39.54;-0.00,-60.50 25.98,-55.25 25.98,44.75 -0.00,39.50;2.61,-60.46 27.19,-54.44 27.19,45.56 2.61,39.54;5.21,-60.34 28.19,-53.59 28.19,46.41 5.21,39.66;7.76,-60.14 28.98,-52.72 28.98,47.28 7.76,39.86;10.26,-59.87 29.54,-51.82 29.54,48.18 10.26,40.13;12.68,-59.52 29.89,-50.92 29.89,49.08 12.68,40.48;15.00,-59.09 30.00,-50.00 30.00,50.00 15.00,40.91" dur="25s" repeatCount="indefinite" />
+          <animate attributeName="fill-opacity" values="0.78;0.74;0.70;0.67;0.63;0.59;0.55;0.51;0.47;0.43;0.40;0.36;0.33;0.29;0.26;0.23;0.21;0.18;0.16;0.14;0.13;0.12;0.11;0.10;0.10;0.10;0.11;0.12;0.13;0.14;0.16;0.18;0.21;0.23;0.26;0.29;0.33;0.36;0.40;0.43;0.47;0.51;0.55;0.59;0.63;0.67;0.70;0.74;0.77;0.81;0.84;0.87;0.89;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.90;0.89;0.87;0.84;0.81;0.78" dur="25s" repeatCount="indefinite" />
+        </polygon>
+    
+      </g>
+
+      <!-- FRONT RINGS -->
+      <g transform="rotate(25)" clip-path="url(#front-half)">
+        <ellipse cx="0" cy="0" rx="80" ry="25" fill="none" stroke="rgba(0,150,200,0.5)" stroke-width="5">
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="80" ry="25" fill="none" stroke="#00F5FF" stroke-width="4" stroke-dasharray="15 2 2 2" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="15s" repeatCount="indefinite" />
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="74" ry="22" fill="none" stroke="#FFFFFF" stroke-width="1.5">
+        </ellipse>
+      </g>
+      <g transform="rotate(-35)" clip-path="url(#front-half)">
+        <ellipse cx="0" cy="0" rx="120" ry="38" fill="none" stroke="rgba(168,85,247,0.4)" stroke-width="6">
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="120" ry="38" fill="none" stroke="#A855F7" stroke-width="3" stroke-dasharray="10 5 5 10" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="30s" repeatCount="indefinite" />
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="120" ry="38" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-dasharray="2 98" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="5s" repeatCount="indefinite" />
+        </ellipse>
+      </g>
+      <g transform="rotate(60)" clip-path="url(#front-half)">
+        <ellipse cx="0" cy="0" rx="150" ry="48" fill="none" stroke="rgba(0,245,255,0.2)" stroke-width="2">
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="150" ry="48" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="0.5 99.5" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="40s" repeatCount="indefinite" />
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="150" ry="48" fill="none" stroke="#A855F7" stroke-width="3" stroke-dasharray="1 99" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="25s" repeatCount="indefinite" />
+        </ellipse>
+      </g>
+      <g transform="rotate(-15)" clip-path="url(#front-half)">
+        <ellipse cx="0" cy="0" rx="180" ry="60" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1">
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="180" ry="60" fill="none" stroke="#00F5FF" stroke-width="2" stroke-dasharray="20 80" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="60s" repeatCount="indefinite" />
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="180" ry="60" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="0.5 49.5" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="15s" repeatCount="indefinite" />
+        </ellipse>
+      </g>
+      <g transform="rotate(10)" clip-path="url(#front-half)">
+        <ellipse cx="0" cy="0" rx="135" ry="43" fill="none" stroke="rgba(168,85,247,0.3)" stroke-width="8" stroke-dasharray="1 2" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="45s" repeatCount="indefinite" />
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="135" ry="43" fill="none" stroke="#00F5FF" stroke-width="1" stroke-dasharray="0.5 2" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="20s" repeatCount="indefinite" />
+        </ellipse>
+      </g>
+      <g transform="rotate(80)" clip-path="url(#front-half)">
+        <ellipse cx="0" cy="0" rx="170" ry="130" fill="none" stroke="rgba(0,245,255,0.1)" stroke-width="1">
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="170" ry="130" fill="none" stroke="#A855F7" stroke-width="1.5" stroke-dasharray="5 20" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="35s" repeatCount="indefinite" />
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="170" ry="130" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="0.5 99.5" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="8s" repeatCount="indefinite" />
+        </ellipse>
+      </g>
+      <g transform="rotate(-70)" clip-path="url(#front-half)">
+        <ellipse cx="0" cy="0" rx="90" ry="30" fill="none" stroke="rgba(0,150,200,0.5)" stroke-width="2">
+        </ellipse>
+        <ellipse cx="0" cy="0" rx="90" ry="30" fill="none" stroke="#00F5FF" stroke-width="1.5" stroke-dasharray="10 10" pathLength="100" filter="url(#glow)">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="22s" repeatCount="indefinite" />
+        </ellipse>
+      </g>
+
+
+      <!-- Foreground Energy Arcs & Plasma Streams -->
+      <g stroke="#FFFFFF" stroke-width="1" fill="none" opacity="0.8" filter="url(#glow)">
+        <path d="M 0 0 Q 50 -60 100 -20" stroke-dasharray="1 25" pathLength="100">
+          <animate attributeName="stroke-dashoffset" from="100" to="0" dur="1s" repeatCount="indefinite" />
+        </path>
+        <path d="M 0 0 Q -50 60 -100 30" stroke-dasharray="2 30" pathLength="100">
+          <animate attributeName="stroke-dashoffset" from="100" to="0" dur="1.5s" repeatCount="indefinite" />
+        </path>
+        <path d="M 0 0 Q 30 100 60 130" stroke-dasharray="1 15" pathLength="100">
+          <animate attributeName="stroke-dashoffset" from="100" to="0" dur="0.8s" repeatCount="indefinite" />
+        </path>
+        <path d="M 0 0 Q -60 -60 -110 -90" stroke-dasharray="2 25" pathLength="100">
+          <animate attributeName="stroke-dashoffset" from="100" to="0" dur="1.2s" repeatCount="indefinite" />
+        </path>
+      </g>
+
+    </g> <!-- End Scaled Reactor -->
+  </g>
+<!-- 5. Bottom Section: System Status -->
+  <g transform="translate(80, 440)">
+    <rect width="320" height="40" rx="20" fill="rgba(0,245,255,0.1)" stroke="#00F5FF" stroke-width="1.5" />
+    <!-- Pulse Effect -->
+    <circle cx="25" cy="20" r="6" fill="#00FF00">
+      <animate attributeName="opacity" values="0.8; 0" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="r" values="6; 14" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="25" cy="20" r="6" fill="#00FF00" />
+    <text x="45" y="25" fill="#A0ABC0" font-size="14" font-weight="600" class="mono">SYSTEM STATUS: <tspan fill="#00FF00">ONLINE</tspan></text>
+  </g>
+  
+  <g transform="translate(1200, 440)">
+      <rect width="320" height="40" rx="20" fill="rgba(0,245,255,0.1)" stroke="#00F5FF" stroke-width="1.5" />
+      <!-- Pulse Effect -->
+      <circle cx="25" cy="20" r="6" fill="#00F5FF">
+        <animate attributeName="opacity" values="0.8; 0" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="r" values="6; 14" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="25" cy="20" r="6" fill="#00F5FF" />
+      <text x="45" y="25" fill="#A0ABC0" font-size="14" font-weight="600" class="mono">OPEN FOR: <tspan fill="#00F5FF">OPPORTUNITIES</tspan></text>
+    </g>
+</svg>
