@@ -1,17 +1,14 @@
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=ABHIJEET%20KUMAR&fontSize=50&fontAlignY=35&desc=Full%20Stack%20Developer%20%E2%80%A2%20AI%20Engineer%20%E2%80%A2%20Competitive%20Programmer&descAlignY=55&descSize=20&animation=twinkling" width="100%"/>
+ <div align="center">
+  <img src="header1.svg" width="100%"/>
   
   <br/>
   <i><b>"Building scalable AI systems and backend applications."</b></i>
   <br/><br/>
   
-  <a href="https://abhijeet-portfolio-teal.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="Portfolio"/></a>
-  <a href="https://www.linkedin.com/in/abhijeet-kumar-2a280b2a3"><img src="https://img.shields.io/badge/LinkedIn-0077b5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="https://leetcode.com/u/Abhijeet_004/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=LeetCode&logoColor=white" alt="LeetCode"/></a>
-  <a href="mailto:abhijeetkumar111000@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
-  
-  <br/><br/>
-  <code>System Status: Online & Open to exciting opportunities</code>
+  <a href="https://abhijeet-portfolio-teal.vercel.app/"><img src="portfolio.svg" alt="Portfolio" /></a>
+  <a href="https://www.linkedin.com/in/abhijeet-kumar-2a280b2a3"><img src="linkedin.svg" alt="LinkedIn" /></a>
+  <a href="https://leetcode.com/u/Abhijeet_004/"><img src="leetcode.svg" alt="LeetCode" /></a>
+  <a href="mailto:abhijeetkumar111000@gmail.com"><img src="email.svg" alt="Email" /></a>
 </div>
 
 <br/>
