@@ -172,7 +172,7 @@
 
 <br/>
 
-<h2 align="center">✦ KNOWLEDGE TREE ✦</h2>
+<!-- <h2 align="center">✦ KNOWLEDGE TREE ✦</h2>
 
 ```text
 Computer Science
@@ -191,7 +191,7 @@ Computer Science
       └── High Concurrency Systems
 ```
 
-<br/>
+<br/> -->
 
 <div align="center">
   <img src="./experience-journey.svg" alt="Experience Journey" width="100%" />
