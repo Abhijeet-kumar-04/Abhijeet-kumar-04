@@ -11,30 +11,6 @@
 </div>
 
 <br/>
-
-<h2 align="center">✦ WHOAMI ✦</h2>
-
-<div align="center">
-  <img src="./mac-terminal.svg" alt="Mac Terminal Whoami" width="100%" />
-</div>
-
-<br/>
-
-<!-- <h2 align="center">✦ ABHIJEET OS ✦</h2>
-
-```text
-┌──────────────────────────────────────────────────────────────────┐
-│ AbhijeetOS v3.0                                                  │
-├──────────────────────────────────────────────────────────────────┤
-│ Status     : Building AI Recruitment System & Music Hub          │
-│ Role       : Full Stack Developer & AI Engineer                  │
-│ Rank       : Codeforces Pupil                                    │
-│ Education  : B.Tech CSE @ NIT Silchar                            │
-└──────────────────────────────────────────────────────────────────┘
-```
-
-<br/> -->
-
 <h2 align="center">✦ FEATURED PROJECTS ✦</h2>
 
 <table align="center" width="100%">
