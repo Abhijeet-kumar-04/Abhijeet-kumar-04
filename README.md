@@ -6,7 +6,7 @@
   <br/><br/>
   
   <a href="https://abhijeet-portfolio-teal.vercel.app/"><img src="portfolio.svg" alt="Portfolio" /></a>
-  <a href="https://www.linkedin.com/in/abhijeet-kumar-2a280b2a3"><img src="linkedin.svg" alt="LinkedIn" /></a>
+  <a href="https://www.linkedin.com/in/abhijeet-kumar-tech/"><img src="linkedin.svg" alt="LinkedIn" /></a>
   <a href="https://leetcode.com/u/Abhijeet_004/"><img src="leetcode.svg" alt="LeetCode" /></a>
 </div>
 
