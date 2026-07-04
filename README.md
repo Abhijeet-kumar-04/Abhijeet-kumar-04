@@ -111,8 +111,8 @@
 <h2 align="center">✦ GITHUB & CODING METRICS ✦</h2>
 <div align="center">
   <div>
-    <img src="https://github-readme-stats.vercel.app/api?username=Abhijeet-kumar-04&show_icons=true&theme=transparent&hide_border=true&title_color=cyan&text_color=white" height="150" alt="GitHub Stats" />
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Abhijeet-kumar-04&layout=compact&theme=transparent&hide_border=true&title_color=cyan&text_color=white" height="150" alt="Top Languages" />
+    <img src="https://my-readme-stats-lac.vercel.app/api?username=Abhijeet-kumar-04&show_icons=true&theme=transparent&hide_border=true&title_color=cyan&text_color=white&v=1" height="150" alt="GitHub Stats" />
+    <img src="https://my-readme-stats-lac.vercel.app/api/top-langs/?username=Abhijeet-kumar-04&layout=compact&theme=transparent&hide_border=true&title_color=cyan&text_color=white&v=1" height="150" alt="Top Languages" />
   </div>
   <br/>
 
@@ -134,6 +134,7 @@
     <img src="https://img.shields.io/badge/LeetCode-View_Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode" />
   </a>
 </div>
+  <br/>
 
 <br/>
 <h2 align="center">✦ CONTRIBUTION GRAPH ✦</h2>
