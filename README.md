@@ -200,10 +200,10 @@
   </picture>
 </div>
 
-<br/>
+<!-- <br/>
 <div align="center">
   <img src="./experience-journey.svg" alt="Experience Journey" width="100%" />
-</div>
+</div> -->
 
 <br/>
 <h2 align="center">✦ NOW ✦</h2>
