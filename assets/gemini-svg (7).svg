@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="42" viewBox="0 0 150 42">
+  <rect x="1" y="1" width="148" height="40" rx="8" fill="#11151a" stroke="#F15A29" stroke-width="1.2"/>
+  <!-- Glass Reflection -->
+  <polygon points="15,1 45,1 25,41 1,41" fill="#ffffff" opacity="0.06"/>
+  <polygon points="55,1 75,1 45,41 25,41" fill="#ffffff" opacity="0.03"/>
+  <!-- Icon (Coding Ninjas / CodeStudio) -->
+  <path d="M19,16 L15,21 L19,26 M25,16 L29,21 L25,26" fill="none" stroke="#F15A29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Text -->
+  <text x="42" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">CodeStudio</text>
+  <!-- Arrow -->
+  <text x="125" y="25" font-family="Arial, sans-serif" font-size="14" fill="#6e7681">→</text>
+</svg>

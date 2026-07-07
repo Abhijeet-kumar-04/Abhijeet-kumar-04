@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="42" viewBox="0 0 150 42">
+  <rect x="1" y="1" width="148" height="40" rx="8" fill="#11151a" stroke="#00EA64" stroke-width="1.2"/>
+  <!-- Glass Reflection -->
+  <polygon points="15,1 45,1 25,41 1,41" fill="#ffffff" opacity="0.06"/>
+  <polygon points="55,1 75,1 45,41 25,41" fill="#ffffff" opacity="0.03"/>
+  <!-- Icon (HackerRank H) -->
+  <path d="M16,15 L18,15 L18,27 L16,27 Z M26,15 L28,15 L28,27 L26,27 Z M18,20 L26,20 L26,22 L18,22 Z" fill="#00EA64"/>
+  <!-- Text -->
+  <text x="42" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">HackerRank</text>
+  <!-- Arrow -->
+  <text x="125" y="25" font-family="Arial, sans-serif" font-size="14" fill="#6e7681">→</text>
+</svg>
