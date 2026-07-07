@@ -110,30 +110,48 @@
 
 <h2 align="center">✦ GITHUB & CODING METRICS ✦</h2>
 <div align="center">
-  <div>
-    <img src="https://my-readme-stats-lac.vercel.app/api?username=Abhijeet-kumar-04&show_icons=true&theme=transparent&hide_border=true&title_color=cyan&text_color=white&v=1" height="150" alt="GitHub Stats" />
-    <img src="https://my-readme-stats-lac.vercel.app/api/top-langs/?username=Abhijeet-kumar-04&layout=compact&theme=transparent&hide_border=true&title_color=cyan&text_color=white&v=1" height="150" alt="Top Languages" />
-  </div>
-  <br/>
+  <!-- GitHub Stats and Top Languages in a Table for Perfect Alignment -->
+  <table align="center" style="border: none; background-color: transparent;">
+    <tr style="border: none; background-color: transparent;">
+      <td align="center" style="border: none; background-color: transparent;">
+        <img src="https://my-readme-stats-lac.vercel.app/api?username=Abhijeet-kumar-04&show_icons=true&theme=transparent&hide_border=true&title_color=cyan&text_color=white&icon_color=cyan&v=1" height="165" alt="GitHub Stats" />
+      </td>
+      <td align="center" style="border: none; background-color: transparent;">
+        <img src="https://my-readme-stats-lac.vercel.app/api/top-langs/?username=Abhijeet-kumar-04&layout=compact&theme=transparent&hide_border=true&title_color=cyan&text_color=white&v=1" height="165" alt="Top Languages" />
+      </td>
+    </tr>
+  </table>
 
-  <div>
-    <img src="https://github-readme-streak-stats-alpha-khaki.vercel.app/?user=Abhijeet-kumar-04&theme=transparent&hide_border=true&title_color=cyan&text_color=white" alt="GitHub Streak" /></div>
-  <br/>
+<!-- GitHub Streak -->
+  <img src="https://github-readme-streak-stats-alpha-khaki.vercel.app/?user=Abhijeet-kumar-04&theme=transparent&hide_border=true&title_color=cyan&text_color=white&ring=cyan&fire=cyan&currStreakNum=white" alt="GitHub Streak" />
+  <br/><br/>
 
+<!-- Animated Divider -->
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="divider" width="700" />
+  <br/><br/>
 
+<div align="center">
   <h3>🏆 Coding Profiles & Growth Tracking</h3>
   <p><i>View my monthly effort recaps and competitive programming profiles:</i></p>
-  
+  <br/>
+
   <a href="https://codolio.com/profile/Abhijeet__04">
-    <img src="https://img.shields.io/badge/Codolio-View_Profile-000000?style=for-the-badge&logo=googleanalytics&logoColor=white" alt="Codolio" />
+    <img src="./assets/codolio.svg" alt="Codolio" width="150" />
   </a>
+  &nbsp;
   <a href="https://www.hackerearth.com/@abhijeetkumar111000/">
-    <img src="https://img.shields.io/badge/HackerEarth-View_Profile-2C3454?style=for-the-badge&logo=hackerearth&logoColor=white" alt="HackerEarth" />
+    <img src="./assets/hackerearth.svg" alt="HackerEarth" width="150" />
   </a>
+  &nbsp;
   <a href="https://leetcode.com/u/Abhijeet_004/">
-    <img src="https://img.shields.io/badge/LeetCode-View_Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode" />
+    <img src="./assets/leetcode.svg" alt="LeetCode" width="150" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/Abhijeet-kumar-04">
+    <img src="./assets/github.svg" alt="GitHub" width="150" />
   </a>
 </div>
+<br/>
   <br/>
 
 <br/>
