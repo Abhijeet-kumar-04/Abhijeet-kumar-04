@@ -135,21 +135,55 @@
   <p><i>View my monthly effort recaps and competitive programming profiles:</i></p>
   <br/>
 
+  <!-- Row 1: Primary Profiles -->
   <a href="https://codolio.com/profile/Abhijeet__04">
     <img src="./assets/codolio.svg" alt="Codolio" width="150" />
-  </a>
-  &nbsp;
-  <a href="https://www.hackerearth.com/@abhijeetkumar111000/">
-    <img src="./assets/hackerearth.svg" alt="HackerEarth" width="150" />
-  </a>
-  &nbsp;
-  <a href="https://leetcode.com/u/Abhijeet_004/">
-    <img src="./assets/leetcode.svg" alt="LeetCode" width="150" />
   </a>
   &nbsp;
   <a href="https://github.com/Abhijeet-kumar-04">
     <img src="./assets/github.svg" alt="GitHub" width="150" />
   </a>
+  &nbsp;
+  <a href="https://leetcode.com/u/Abhijeet_004">
+    <img src="./assets/leetcode.svg" alt="LeetCode" width="150" />
+  </a>
+  &nbsp;
+  <a href="https://www.hackerearth.com/@abhijeetkumar111000/">
+    <img src="./assets/hackerearth.svg" alt="HackerEarth" width="150" />
+  </a>
+  <br/><br/>
+
+  <!-- Row 2: Competitive Programming -->
+  <a href="https://codeforces.com/profile/Abhijeet_04">
+    <img src="./assets/codeforces.svg" alt="Codeforces" width="150" />
+  </a>
+  &nbsp;
+  <a href="https://www.codechef.com/users/extreme_04">
+    <img src="./assets/codechef.svg" alt="CodeChef" width="150" />
+  </a>
+  &nbsp;
+  <a href="https://atcoder.jp/users/Abhijeet_04">
+    <img src="./assets/atcoder.svg" alt="AtCoder" width="150" />
+  </a>
+  <br/><br/>
+
+  <!-- Row 3: Practice & Problem Solving -->
+  <a href="https://www.geeksforgeeks.org/user/abhijeetkuupi2">
+    <img src="./assets/gfg.svg" alt="GeeksForGeeks" width="150" />
+  </a>
+  &nbsp;
+  <a href="https://www.naukri.com/code360/profile/5427d73b-4abe-4d88-916e-39a">
+    <img src="./assets/codestudio.svg" alt="CodeStudio" width="150" />
+  </a>
+  &nbsp;
+  <a href="https://www.interviewbit.com/profile/abhijeet-kumar_491">
+    <img src="./assets/interviewbit.svg" alt="InterviewBit" width="150" />
+  </a>
+  &nbsp;
+  <a href="https://www.hackerrank.com/profile/abhijeetkumar111">
+    <img src="./assets/hackerrank.svg" alt="HackerRank" width="150" />
+  </a>
+
 </div>
 <br/>
   <br/>
