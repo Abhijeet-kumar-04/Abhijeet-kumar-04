@@ -130,34 +130,36 @@
 <!-- Animated Divider -->
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="divider" width="700" />
   <br/><br/>
+  
 <!-- Coding Profiles & Growth Tracking -->
 <div align="center">
   <h2>✦ Coding Profiles & Growth Tracking ✦</h2>
   <p><i>View my monthly effort recaps and competitive programming profiles:</i></p>
   <br/>
 
-  <table align="center" style="border-collapse: collapse; border: none;">
-    <tr align="center">
-      <th style="padding: 10px;"> Tracking & Assessments</th>
-      <th style="padding: 10px;"> Competitive Programming</th>
-      <th style="padding: 10px;"> Practice & Problem Solving</th>
+  <table align="center" border="0" role="presentation" style="border-collapse: collapse; border: none;">
+    <tr align="center" style="border: none;">
+      <!-- Using <td> with <b> instead of <th> prevents GitHub's thick header borders -->
+      <td style="border: none; padding: 10px;"><b>✦ Tracking & Assessments ✦</b></td>
+      <td style="border: none; padding: 10px;"><b>✦ Competitive Programming ✦</b></td>
+      <td style="border: none; padding: 10px;"><b>✦ Practice & Problem Solving ✦</b></td>
     </tr>
-    <tr align="center" valign="top">
+    <tr align="center" valign="top" style="border: none;">
       <!-- Column 1: Tracking & Assessments -->
-      <td style="padding: 10px;">
+      <td style="border: none; padding: 10px;">
         <a href="https://codolio.com/profile/Abhijeet__04"><img src="./assets/Codolio.svg" alt="Codolio" width="150" /></a><br/><br/>
         <a href="https://github.com/Abhijeet-kumar-04"><img src="./assets/GitHub.svg" alt="GitHub" width="150" /></a><br/><br/>
         <a href="https://leetcode.com/u/Abhijeet_004"><img src="./assets/LeetCode.svg" alt="LeetCode" width="150" /></a><br/><br/>
         <a href="https://www.hackerearth.com/@abhijeetkumar111000/"><img src="./assets/HackerEarth.svg" alt="HackerEarth" width="150" /></a>
       </td>
       <!-- Column 2: Competitive Programming -->
-      <td style="padding: 10px;">
+      <td style="border: none; padding: 10px;">
         <a href="https://codeforces.com/profile/Abhijeet_04"><img src="./assets/Codeforces.svg" alt="Codeforces" width="150" /></a><br/><br/>
         <a href="https://www.codechef.com/users/extreme_04"><img src="./assets/CodeChef.svg" alt="CodeChef" width="150" /></a><br/><br/>
         <a href="https://atcoder.jp/users/Abhijeet_04"><img src="./assets/AtCoder.svg" alt="AtCoder" width="150" /></a>
       </td>
       <!-- Column 3: Practice & Problem Solving -->
-      <td style="padding: 10px;">
+      <td style="border: none; padding: 10px;">
         <a href="https://www.geeksforgeeks.org/user/abhijeetkuupi2"><img src="./assets/GFG.svg" alt="GeeksForGeeks" width="150" /></a><br/><br/>
         <a href="https://www.naukri.com/code360/profile/5427d73b-4abe-4d88-916e-39a"><img src="./assets/CodeStudio.svg" alt="CodeStudio" width="150" /></a><br/><br/>
         <a href="https://www.interviewbit.com/profile/abhijeet-kumar_491"><img src="./assets/InterviewBit.svg" alt="InterviewBit" width="150" /></a><br/><br/>
@@ -167,6 +169,7 @@
   </table>
 </div>
 <br/>
+
 
 <br/>
 <h2 align="center">✦ CONTRIBUTION GRAPH ✦</h2>
