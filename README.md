@@ -11,6 +11,8 @@
 </div>
 
 <br/>
+
+<!--  FEATURED PROJECTS -->
 <h2 align="center">✦ FEATURED PROJECTS ✦</h2>
 
 <table align="center" width="100%">
@@ -40,7 +42,7 @@
 </table>
 
 <br/>
-
+<!-- TECH STACK -->
 <h2 align="center">✦ TECH STACK ✦</h2>
 
 <div align="center">
@@ -70,24 +72,39 @@
 
 <br/>
 
+<!-- ACHIEVEMENTS -->
 <h2 align="center">✦ ACHIEVEMENTS ✦</h2>
 
-<table align="center" width="100%">
+<table align="center">
   <tr align="center">
-    <td width="33%">
+    <!-- The transparent images force each column to be at least 200px wide -->
+    <td width="25%">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif" width="200" height="1" alt="" /><br/>
       <h2>800+</h2>
       <code>DSA PROBLEMS SOLVED</code>
     </td>
-    <td width="33%">
+    <td width="25%">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif" width="200" height="1" alt="" /><br/>
       <h2>PUPIL</h2>
       <code>CODEFORCES RANK</code>
     </td>
-    <td width="33%">
-      <h2>500+</h2>
-      <code>CONCURRENT USERS</code>
+    <td width="25%">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif" width="200" height="1" alt="" /><br/>
+      <h2>3-STAR</h2>
+      <code>CODECHEF RATING</code>
+    </td>
+    <td width="25%">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif" width="200" height="1" alt="" /><br/>
+      <h2>TOP 1.5K</h2>
+      <code>FLIPKART GRID '26</code>
     </td>
   </tr>
   <tr align="center">
+    <td>
+      <br/>
+      <h2>500+</h2>
+      <code>CONCURRENT USERS</code>
+    </td>
     <td>
       <br/>
       <h2>95%+</h2>
@@ -108,6 +125,7 @@
 
 <br/>
 
+<!-- GITHUB & CODING METRICS -->
 <h2 align="center">✦ GITHUB & CODING METRICS ✦</h2>
 <div align="center">
   <!-- GitHub Stats and Top Languages in a Table for Perfect Alignment -->
