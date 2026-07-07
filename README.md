@@ -117,9 +117,9 @@
   <br/>
 
   <div>
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Abhijeet-kumar-04&theme=transparent&hide_border=true&title_color=cyan&text_color=white" alt="GitHub Streak" />
-  </div>
+    <img src="https://github-readme-streak-stats-alpha-khaki.vercel.app/?user=Abhijeet-kumar-04&theme=transparent&hide_border=true&title_color=cyan&text_color=white" alt="GitHub Streak" /></div>
   <br/>
+
 
   <h3>🏆 Coding Profiles & Growth Tracking</h3>
   <p><i>View my monthly effort recaps and competitive programming profiles:</i></p>
@@ -148,28 +148,6 @@
 </div>
 
 <br/>
-
-<!-- <h2 align="center">✦ KNOWLEDGE TREE ✦</h2>
-
-```text
-Computer Science
-│
-├── Competitive Programming
-│     └── 800+ Problems Solved
-│
-├── Full Stack Development
-│     ├── React & Next.js
-│     ├── Node.js & Go
-│     └── MongoDB & PostgreSQL
-│
-└── AI Engineering
-      ├── Gemini & Groq Models
-      ├── LLM Applications
-      └── High Concurrency Systems
-```
-
-<br/> -->
-
 <div align="center">
   <img src="./experience-journey.svg" alt="Experience Journey" width="100%" />
 </div>
