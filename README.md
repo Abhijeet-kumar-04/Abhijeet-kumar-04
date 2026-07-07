@@ -116,73 +116,44 @@
       <td align="center" style="border: none; background-color: transparent;">
         <img src="https://my-readme-stats-lac.vercel.app/api?username=Abhijeet-kumar-04&show_icons=true&theme=transparent&hide_border=true&title_color=cyan&text_color=white&icon_color=cyan&v=1" height="165" alt="GitHub Stats" />
       </td>
-      <td align="center" style="border: none; background-color: transparent;">
+      <td align="center" style="border: line; background-color: white;">
         <img src="https://my-readme-stats-lac.vercel.app/api/top-langs/?username=Abhijeet-kumar-04&layout=compact&theme=transparent&hide_border=true&title_color=cyan&text_color=white&v=1" height="165" alt="Top Languages" />
       </td>
     </tr>
   </table>
 
 <!-- GitHub Streak -->
-  <img src="https://github-readme-streak-stats-alpha-khaki.vercel.app/?user=Abhijeet-kumar-04&theme=transparent&hide_border=true&title_color=cyan&text_color=white&ring=cyan&fire=cyan&currStreakNum=white" alt="GitHub Streak" />
-  <br/><br/>
+<img src="https://github-readme-streak-stats-alpha-khaki.vercel.app/?user=Abhijeet-kumar-04&theme=transparent&hide_border=false&border=00FFFF&stroke=00FFFF&ring=00FFFF&fire=00FFFF&currStreakLabel=00FFFF&sideLabels=00FFFF&dates=7F8C8D&sideNums=FFFFFF&currStreakNum=FFFFFF" />
+
+<br/><br/>
 
 <!-- Animated Divider -->
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="divider" width="700" />
   <br/><br/>
 
 <div align="center">
-  <h2>🏆 Coding Profiles & Growth Tracking</h2>
+  <h2>✦ Coding Profiles & Growth Tracking ✦</h2>
   <p><i>View my monthly effort recaps and competitive programming profiles:</i></p>
   <br/>
 
   <!-- Row 1: Primary Profiles -->
-  <a href="https://codolio.com/profile/Abhijeet__04">
-    <img src="./assets/Codolio.svg" alt="Codolio" width="150" />
-  </a>
-  &nbsp;
-  <a href="https://github.com/Abhijeet-kumar-04">
-    <img src="./assets/GitHub.svg" alt="GitHub" width="150" />
-  </a>
-  &nbsp;
-  <a href="https://leetcode.com/u/Abhijeet_004">
-    <img src="./assets/LeetCode.svg" alt="LeetCode" width="150" />
-  </a>
-  &nbsp;
-  <a href="https://www.hackerearth.com/@abhijeetkumar111000/">
-    <img src="./assets/HackerEarth.svg" alt="HackerEarth" width="150" />
-  </a>
+  <a href="https://codolio.com/profile/Abhijeet__04"><img src="./assets/Codolio.svg" alt="Codolio" width="150" /></a>&nbsp;
+  <a href="https://github.com/Abhijeet-kumar-04"><img src="./assets/GitHub.svg" alt="GitHub" width="150" /></a>&nbsp;
+  <a href="https://leetcode.com/u/Abhijeet_004"><img src="./assets/LeetCode.svg" alt="LeetCode" width="150" /></a>&nbsp;
+  <a href="https://www.hackerearth.com/@abhijeetkumar111000/"><img src="./assets/HackerEarth.svg" alt="HackerEarth" width="150" /></a>
   <br/><br/>
 
   <!-- Row 2: Competitive Programming -->
-  <a href="https://codeforces.com/profile/Abhijeet_04">
-    <img src="./assets/Codeforces.svg" alt="Codeforces" width="150" />
-  </a>
-  &nbsp;
-  <a href="https://www.codechef.com/users/extreme_04">
-    <img src="./assets/CodeChef.svg" alt="CodeChef" width="150" />
-  </a>
-  &nbsp;
-  <a href="https://atcoder.jp/users/Abhijeet_04">
-    <img src="./assets/AtCoder.svg" alt="AtCoder" width="150" />
-  </a>
+  <a href="https://codeforces.com/profile/Abhijeet_04"><img src="./assets/Codeforces.svg" alt="Codeforces" width="150" /></a>&nbsp;
+  <a href="https://www.codechef.com/users/extreme_04"><img src="./assets/CodeChef.svg" alt="CodeChef" width="150" /></a>&nbsp;
+  <a href="https://atcoder.jp/users/Abhijeet_04"><img src="./assets/AtCoder.svg" alt="AtCoder" width="150" /></a>
   <br/><br/>
 
   <!-- Row 3: Practice & Problem Solving -->
-  <a href="https://www.geeksforgeeks.org/user/abhijeetkuupi2">
-    <img src="./assets/GFG.svg" alt="GeeksForGeeks" width="150" />
-  </a>
-  &nbsp;
-  <a href="https://www.naukri.com/code360/profile/5427d73b-4abe-4d88-916e-39a">
-    <img src="./assets/CodeStudio.svg" alt="CodeStudio" width="150" />
-  </a>
-  &nbsp;
-  <a href="https://www.interviewbit.com/profile/abhijeet-kumar_491">
-    <img src="./assets/InterviewBit.svg" alt="InterviewBit" width="150" />
-  </a>
-  &nbsp;
-  <a href="https://www.hackerrank.com/profile/abhijeetkumar111">
-    <img src="./assets/HackerRank.svg" alt="HackerRank" width="150" />
-  </a>
+  <a href="https://www.geeksforgeeks.org/user/abhijeetkuupi2"><img src="./assets/GFG.svg" alt="GeeksForGeeks" width="150" /></a>&nbsp;
+  <a href="https://www.naukri.com/code360/profile/5427d73b-4abe-4d88-916e-39a"><img src="./assets/CodeStudio.svg" alt="CodeStudio" width="150" /></a>&nbsp;
+  <a href="https://www.interviewbit.com/profile/abhijeet-kumar_491"><img src="./assets/InterviewBit.svg" alt="InterviewBit" width="150" /></a>&nbsp;
+  <a href="https://www.hackerrank.com/profile/abhijeetkumar111"><img src="./assets/HackerRank.svg" alt="HackerRank" width="150" /></a>
 
 </div>
 <br/>
