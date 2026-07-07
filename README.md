@@ -79,22 +79,22 @@
   <tr align="center">
     <!-- The transparent images force each column to be at least 200px wide -->
     <td width="25%">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif" width="190" height="1" alt="" /><br/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif" width="180" height="1" alt="" /><br/>
       <h2>800+</h2>
       <code>DSA PROBLEMS SOLVED</code>
     </td>
     <td width="25%">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif" width="190" height="1" alt="" /><br/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif" width="180" height="1" alt="" /><br/>
       <h2>PUPIL</h2>
       <code>CODEFORCES RANK</code>
     </td>
     <td width="25%">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif" width="190" height="1" alt="" /><br/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif" width="180" height="1" alt="" /><br/>
       <h2>3-STAR</h2>
       <code>CODECHEF RATING</code>
     </td>
     <td width="25%">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif" width="190" height="1" alt="" /><br/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif" width="180" height="1" alt="" /><br/>
       <h2>TOP 1.5K</h2>
       <code>FLIPKART GRID '26</code>
     </td>
