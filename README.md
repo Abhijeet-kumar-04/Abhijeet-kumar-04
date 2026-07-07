@@ -151,7 +151,7 @@
 
   <!-- Row 3: Practice & Problem Solving -->
   <a href="https://www.geeksforgeeks.org/user/abhijeetkuupi2"><img src="./assets/GFG.svg" alt="GeeksForGeeks" width="150" /></a>&nbsp;
-  <a href="https://www.naukri.com/code360/profile/5427d73b-4abe-4d88-916e-39a"><img src="./assets/CodeStudio.svg" alt="CodeStudio" width="150" /></a>&nbsp;
+  <a href="https://www.naukri.com/code360/profile/5427d73b-4abe-4d88-916e-39aac4b29756"><img src="./assets/CodeStudio.svg" alt="CodeStudio" width="150" /></a>&nbsp;
   <a href="https://www.interviewbit.com/profile/abhijeet-kumar_491"><img src="./assets/InterviewBit.svg" alt="InterviewBit" width="150" /></a>&nbsp;
   <a href="https://www.hackerrank.com/profile/abhijeetkumar111"><img src="./assets/HackerRank.svg" alt="HackerRank" width="150" /></a>
 
